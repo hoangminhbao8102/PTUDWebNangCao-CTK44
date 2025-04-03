@@ -537,7 +537,7 @@ foreach (var s in results)
 // Bài tập 4:
 Console.WriteLine("\n==== BÀI TẬP 4 ====");
 
-var commentRepo = new CommentRepository(context);
+ICommentRepository commentRepo = new CommentRepository(context);
 
 Console.WriteLine("\n1. Thêm comment");
 Console.Write("Nhập PostId: ");
