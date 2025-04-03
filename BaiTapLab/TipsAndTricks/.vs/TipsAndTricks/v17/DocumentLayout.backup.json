@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58AB56F8-886C-4BE9-8832-ADB92EA11FA8}|TatBlog.WinApp\\TatBlog.WinApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.winapp\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58AB56F8-886C-4BE9-8832-ADB92EA11FA8}|TatBlog.WinApp\\TatBlog.WinApp.csproj|solutionrelative:tatblog.winapp\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39C7E6A-398B-4602-A08B-2EAD7A0F3BDC}|TatBlog.Core\\TatBlog.Core.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.core\\dto\\tagitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39C7E6A-398B-4602-A08B-2EAD7A0F3BDC}|TatBlog.Core\\TatBlog.Core.csproj|solutionrelative:tatblog.core\\dto\\tagitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58AB56F8-886C-4BE9-8832-ADB92EA11FA8}|TatBlog.WinApp\\TatBlog.WinApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.winapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58AB56F8-886C-4BE9-8832-ADB92EA11FA8}|TatBlog.WinApp\\TatBlog.WinApp.csproj|solutionrelative:tatblog.winapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\isubscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\isubscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\subscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\subscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,66 +43,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TagItem.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Core\\DTO\\TagItem.cs",
-              "RelativeDocumentMoniker": "TatBlog.Core\\DTO\\TagItem.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Core\\DTO\\TagItem.cs",
-              "RelativeToolTip": "TatBlog.Core\\DTO\\TagItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\CommentRepository.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\CommentRepository.cs",
+              "RelativeToolTip": "TatBlog.Services\\Blogs\\CommentRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T04:15:14.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PagingParams.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WinApp\\PagingParams.cs",
-              "RelativeDocumentMoniker": "TatBlog.WinApp\\PagingParams.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WinApp\\PagingParams.cs",
-              "RelativeToolTip": "TatBlog.WinApp\\PagingParams.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T04:15:09.312Z",
+              "WhenOpened": "2025-04-03T09:08:42.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BlogRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABUAAAAAAAAAA==",
+              "Title": "ICommentRepository.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ICommentRepository.cs",
+              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\ICommentRepository.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ICommentRepository.cs",
+              "RelativeToolTip": "TatBlog.Services\\Blogs\\ICommentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:31:01.137Z",
+              "WhenOpened": "2025-04-03T09:06:13.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IBlogRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:25:26.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WinApp\\Program.cs",
               "RelativeDocumentMoniker": "TatBlog.WinApp\\Program.cs",
               "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WinApp\\Program.cs",
               "RelativeToolTip": "TatBlog.WinApp\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAUwE4AAABRAAAAAAAAAA==",
+              "ViewState": "AgIAACYCAAAAAAAAAAAAAEgCAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:11:05.088Z"
+              "WhenOpened": "2025-03-31T10:11:05.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SubscriberRepository.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\SubscriberRepository.cs",
+              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\SubscriberRepository.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\SubscriberRepository.cs",
+              "RelativeToolTip": "TatBlog.Services\\Blogs\\SubscriberRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:24:35.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ISubscriberRepository.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
+              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
+              "RelativeToolTip": "TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:15:37.126Z",
+              "EditorCaption": ""
             }
           ]
         }

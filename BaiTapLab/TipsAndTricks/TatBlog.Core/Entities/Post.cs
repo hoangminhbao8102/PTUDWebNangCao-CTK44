@@ -52,5 +52,8 @@ namespace TatBlog.Core.Entities
 
         // Danh sách các từ khóa của bài viết
         public IList<Tag> Tags { get; set; }
+
+
+        public ICollection<Comment> Comments { get; set; }
     }
 }
