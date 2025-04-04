@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Threading;
 using TatBlog.Core.DTO;
 using TatBlog.Core.Entities;
 using TatBlog.Data.Contexts;
@@ -8,8 +9,11 @@ using TatBlog.WinApp;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+var optionsBuilder = new DbContextOptionsBuilder<BlogDbContext>();
+optionsBuilder.UseSqlServer(@"Server=LAPTOP-N4TOHTRH\SQLEXPRESS;Database=TatBlog;User ID=sa;Password=minhbao8102;TrustServerCertificate=True;");
+
 // Tạo đối tượng DbContext để quản lý phiên làm việt với CSDL và trạng thái của các đối tượng
-var context = new BlogDbContext();
+var context = new BlogDbContext(optionsBuilder.Options);
 
 // Tạo đối tượng khởi tạo dữ liệu mẫu
 var seeder = new DataSeeder(context);

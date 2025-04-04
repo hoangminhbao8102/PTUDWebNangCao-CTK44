@@ -174,6 +174,15 @@ namespace TatBlog.Services.Blogs
             return await projected.ToPagedListAsync(pagingParams, cancellationToken);
         }
 
+        // Nâng cấp bài tập 1s
+        public async Task<IPagedList<Post>> GetPagedPostsAsync(PostQuery condition, int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default)
+        {
+            return await FilterPosts(condition).ToPagedListAsync(
+                pageNumber, pageSize, 
+                nameof(Post.PostedDate), "DESC", 
+                cancellationToken);
+        }
+
         // Lấy danh sách từ khòa/thẻ và phân trang theo các tham số pagingParams
         public async Task<IPagedList<TagItem>> GetPagedTagsAsync(IPagingParams pagingParams, CancellationToken cancellationToken = default)
         {

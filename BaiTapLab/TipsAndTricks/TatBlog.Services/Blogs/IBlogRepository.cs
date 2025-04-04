@@ -81,5 +81,8 @@ namespace TatBlog.Services.Blogs
 
         // t. Phân trang với ánh xạ sang kiểu T (generic)
         Task<IPagedList<T>> GetPagedPostsAsync<T>(PostQuery query, IPagingParams pagingParams, Func<IQueryable<Post>, IQueryable<T>> mapper, CancellationToken cancellationToken = default);
+
+        // Nâng cấp bài tập 1s
+        Task<IPagedList<Post>> GetPagedPostsAsync(PostQuery condition, int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default);
     }
 }
