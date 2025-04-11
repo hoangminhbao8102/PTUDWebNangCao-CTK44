@@ -1,0 +1,75 @@
+﻿@model Post
+
+<article class="blog-post">
+    <h1>@Model.Title</h1>
+
+    <p class="text-muted">
+        Đăng ngày: @Model.PostedDate.ToString("dd/MM/yyyy") bởi <strong>@Model.Author?.FullName</strong>
+    </p>
+
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <img src="@Model.ImageUrl" alt="@Model.Title" class="img-fluid mb-3" />
+    }
+
+    <div class="post-content">
+        @Html.Raw(Model.Description)
+    </div>
+
+    <p class="text-muted mt-3">Lượt xem: @Model.ViewCount</p>
+
+    @if (Model.Tags?.Any() == true)
+    {
+        <p>
+            Tags:
+            @foreach (var tag in Model.Tags)
+            {
+                <a asp-action="Tag" asp-route-slug="@tag.UrlSlug">@tag.Name</a>
+
+                @(tag != Model.Tags.Last() ? ", " : "")
+            }
+        </p>
+    }
+
+    <p>
+        <a asp-action="Category" asp-route-slug="@Model.Category?.UrlSlug">
+            Chủ đề: @Model.Category?.Name
+        </a>
+    </p>
+</article>
+
+<h4>Thảo luận</h4>
+
+<form asp-action="AddComment" method="post">
+    <input type="hidden" name="PostId" value="@Model.Id" />
+    <div class="mb-2">
+        <input name="Name" class="form-control" placeholder="Họ tên..." required />
+    </div>
+    <div class="mb-2">
+        <textarea name="Content" class="form-control" rows="4" placeholder="Nội dung bình luận..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Gửi</button>
+</form>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success mt-2">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger mt-2">@TempData["Error"]</div>
+}
+
+@if (ViewBag.Comments is IList<Comment> comments && comments.Any())
+{
+    <h5 class="mt-4">Bình luận:</h5>
+    <ul class="list-group">
+        @foreach (var c in comments)
+        {
+            <li class="list-group-item">
+                <strong>@c.AuthorName</strong> - <small>@c.PostedDate.ToString("dd/MM/yyyy HH:mm")</small>
+                <p>@c.Content</p>
+            </li>
+        }
+    </ul>
+}

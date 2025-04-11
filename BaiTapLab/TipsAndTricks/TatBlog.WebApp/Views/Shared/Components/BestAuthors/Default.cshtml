@@ -1,0 +1,19 @@
+﻿@model IEnumerable<TatBlog.Core.DTO.AuthorItem>
+
+<div class="best-authors">
+    <h3 class="text-success mb-2">
+        Tác giả nổi bật
+    </h3>
+
+    <ul>
+        @foreach (var author in Model)
+        {
+            <li>
+                <a href="@Url.Action("Author", "Posts", new { authorId = author.Id })">
+                    @author.FullName
+                    (@author.PostCount)
+                </a>
+            </li>
+        }
+    </ul>
+</div>

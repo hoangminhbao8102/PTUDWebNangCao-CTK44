@@ -1,0 +1,51 @@
+﻿@model TatBlog.Core.Entities.Post
+
+@{
+    ViewData["Title"] = Model.Title;
+    var shareUrl = Url.Action("Details", "Post", new
+    {
+        year = Model.PostedDate.Year,
+        month = Model.PostedDate.Month,
+        slug = Model.UrlSlug
+    }, Context.Request.Scheme);
+}
+
+<div class="container mt-4">
+    <article class="card p-4">
+        <h1 class="mb-2">@Model.Title</h1>
+
+        <div class="text-muted mb-3">
+            Đăng ngày: @Model.PostedDate.ToString("dd/MM/yyyy") |
+            Tác giả: <strong>@Model.Author?.FullName</strong> |
+            Chuyên mục: <strong>@Model.Category?.Name</strong>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(Model.ImageUrl))
+        {
+            <img src="/@Model.ImageUrl" class="img-fluid mb-4" alt="@Model.Title" />
+        }
+
+        <div class="post-content">
+            @Html.Raw(Model.Description)
+        </div>
+    </article>
+
+    <!-- Chia sẻ bài viết -->
+    <div class="mt-4">
+        <h5>Chia sẻ bài viết:</h5>
+        <div class="d-flex gap-2">
+            <a class="btn btn-primary" target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u=@shareUrl">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a class="btn btn-info text-white" target="_blank"
+               href="https://twitter.com/intent/tweet?url=@shareUrl&text=@Model.Title">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a class="btn btn-secondary" target="_blank"
+               href="https://www.linkedin.com/shareArticle?mini=true&url=@shareUrl&title=@Model.Title">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</div>

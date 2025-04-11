@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TatBlog.Core.DTO.TagItem>
+
+<div class="tag-cloud">
+    <h3 class="text-success mb-2">
+        Tag cloud
+    </h3>
+
+    <ul>
+        @foreach (var tag in Model)
+        {
+            <li><a href="@Url.Action("ByTag", "Posts", new { tag = tag.Name })">@tag.Name</a></li>
+        }
+    </ul>
+</div>

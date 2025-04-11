@@ -1,0 +1,19 @@
+﻿@using System.Globalization
+@model IEnumerable<TatBlog.Core.DTO.MonthlyPostCount>
+
+<div class="archives">
+    <h3 class="text-success mb-2">
+        Lưu trữ
+    </h3>
+
+    <ul>
+        @foreach (var archive in Model)
+        {
+            <li>
+                <a href="@Url.Action("ByMonth", "Posts", new { year = archive.Year, month = archive.Month })">
+                    @($"{CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(archive.Month)} {archive.Year} ({archive.PostCount})")
+                </a>
+            </li>
+        }
+    </ul>
+</div>

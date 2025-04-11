@@ -200,7 +200,7 @@ namespace TatBlog.Services.Blogs
         }
 
         // Tìm Top N bài viết phổ biến được nhiều người xem nhất
-        public async Task<List<Post>> GetPopularArticlesAsunc(int numPosts, CancellationToken cancellationToken = default)
+        public async Task<List<Post>> GetPopularArticlesAsync(int numPosts, CancellationToken cancellationToken = default)
         {
             return await _context.Set<Post>()
                 .Include(x => x.Author)

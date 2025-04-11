@@ -4,6 +4,9 @@
     var imageUrl = string.IsNullOrWhiteSpace(Model.ImageUrl) 
         ? "/images/image_1.jpg" 
         : $"/{Model.ImageUrl}/";
+
+    var authorSlug = Model.Author.FullName.ToLower().Replace(" ", "-");
+    var categorySlug = Model.Category.Name.ToLower().Replace(" ", "-");
 }
 
 <article class="blog-entry mb-4">
@@ -17,21 +20,31 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">
-                        @Model.Title
+                        <a asp-controller="Blog"
+                           asp-action="Post"
+                           asp-route-year="@Model.PostedDate.Year"
+                           asp-route-month="@Model.PostedDate.Month"
+                           asp-route-day="@Model.PostedDate.Day"
+                           asp-route-slug="@Model.UrlSlug"
+                           class="text-dark text-decoration-none">
+                            @Model.Title
+                        </a>
                     </h5>
                     <p class="card-text">
-                        <small class="text-muted">
-                            Tác giả: 
-                        </small>
-                        <span class="text-primary">
+                        <small class="text-muted">Tác giả: </small>
+                        <a asp-controller="Blog"
+                           asp-action="Author"
+                           asp-route-author="@authorSlug"
+                           class="text-primary">
                             @Model.Author.FullName
-                        </span>
-                        <small class="text-muted">
-                            Chủ đề:
-                        </small>
-                        <span class="text-primary">
+                        </a>
+                        <small class="text-muted"> &nbsp;Chủ đề: </small>
+                        <a asp-controller="Blog"
+                           asp-action="Category"
+                           asp-route-category="@categorySlug"
+                           class="text-primary">
                             @Model.Category.Name
-                        </span>
+                        </a>
                     </p>
                     <p class="card-text">
                         @Html.Raw(Model.Description)
@@ -42,14 +55,14 @@
 
                     <div class="text-end">
                         <a asp-controller="Blog"
-                            asp-action="Post"
-                            asp-route-year="@Model.PostedDate.Year"
-                            asp-route-month="@Model.PostedDate.Month"
-                            asp-route-day="@Model.PostedDate.Day"
-                            asp-route-slug="@Model.UrlSlug"
-                            class="btn btn-primary"
-                            title="@Model.Title">
-                             Xem chi tiết
+                           asp-action="Post"
+                           asp-route-year="@Model.PostedDate.Year"
+                           asp-route-month="@Model.PostedDate.Month"
+                           asp-route-day="@Model.PostedDate.Day"
+                           asp-route-slug="@Model.UrlSlug"
+                           class="btn btn-primary"
+                           title="@Model.Title">
+                            Xem chi tiết
                         </a>
                     </div>
                 </div>

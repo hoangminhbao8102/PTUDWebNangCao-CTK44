@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TatBlog.Core.Settings;
 using TatBlog.Data.Contexts;
 using TatBlog.Data.Seeders;
 using TatBlog.Services.Blogs;
@@ -25,6 +26,12 @@ namespace TatBlog.WebApp.Extensions
                         .GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+            builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+            builder.Services.AddScoped<ISubscriberRepository, SubscriberRepository>();
+            builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+            builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+            builder.Services.AddTransient<IMailService, MailService>();
+
             builder.Services.AddScoped<IDataSeeder, DataSeeder>();
 
             return builder;

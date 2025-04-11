@@ -3,16 +3,68 @@
   "WorkspaceRootPath": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\views\\blog\\post\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\views\\blog\\post\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\views\\blog\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\views\\blog\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\models\\contactviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\models\\contactviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\extensions\\webapplicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\extensions\\webapplicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\extensions\\routeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\extensions\\routeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C39C7E6A-398B-4602-A08B-2EAD7A0F3BDC}|TatBlog.Core\\TatBlog.Core.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.core\\settings\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39C7E6A-398B-4602-A08B-2EAD7A0F3BDC}|TatBlog.Core\\TatBlog.Core.csproj|solutionrelative:tatblog.core\\settings\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\views\\blog\\post.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\views\\blog\\post.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\models\\commentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\models\\commentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,41 +87,197 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Program.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Program.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Program.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:34:51.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RouteExtensions.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Extensions\\RouteExtensions.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Extensions\\RouteExtensions.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Extensions\\RouteExtensions.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Extensions\\RouteExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:32:35.235Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TatBlog.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T03:57:14.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Post\\Details.cshtml",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Views\\Blog\\Post\\Details.cshtml",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Post\\Details.cshtml",
+              "RelativeToolTip": "TatBlog.WebApp\\Views\\Blog\\Post\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T03:47:20.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_SideBar.cshtml",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Shared\\_SideBar.cshtml",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Views\\Shared\\_SideBar.cshtml",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Shared\\_SideBar.cshtml",
+              "RelativeToolTip": "TatBlog.WebApp\\Views\\Shared\\_SideBar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T03:38:46.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.css",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\wwwroot\\css\\main.css",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\wwwroot\\css\\main.css",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\wwwroot\\css\\main.css",
+              "RelativeToolTip": "TatBlog.WebApp\\wwwroot\\css\\main.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-11T03:35:00.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ContactViewModel.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Models\\ContactViewModel.cs",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Models\\ContactViewModel.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Models\\ContactViewModel.cs",
+              "RelativeToolTip": "TatBlog.WebApp\\Models\\ContactViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:22:59.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Controllers\\BlogController.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "TatBlog.WebApp\\Controllers\\BlogController.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAwKgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:13:53.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Index.cshtml",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Views\\Blog\\Index.cshtml",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Index.cshtml",
+              "RelativeToolTip": "TatBlog.WebApp\\Views\\Blog\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T01:35:41.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Contact.cshtml",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Views\\Blog\\Contact.cshtml",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Contact.cshtml",
+              "RelativeToolTip": "TatBlog.WebApp\\Views\\Blog\\Contact.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:38:21.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Shared\\_Header.cshtml",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Views\\Shared\\_Header.cshtml",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Shared\\_Header.cshtml",
+              "RelativeToolTip": "TatBlog.WebApp\\Views\\Shared\\_Header.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T01:32:34.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Controllers\\ContactController.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "TatBlog.WebApp\\Controllers\\ContactController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:23:39.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MailSettings.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Core\\Settings\\MailSettings.cs",
+              "RelativeDocumentMoniker": "TatBlog.Core\\Settings\\MailSettings.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Core\\Settings\\MailSettings.cs",
+              "RelativeToolTip": "TatBlog.Core\\Settings\\MailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:20:36.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IMailService.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\IMailService.cs",
+              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\IMailService.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\IMailService.cs",
+              "RelativeToolTip": "TatBlog.Services\\Blogs\\IMailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:16:05.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "WebApplicationExtensions.cs",
               "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Extensions\\WebApplicationExtensions.cs",
               "RelativeDocumentMoniker": "TatBlog.WebApp\\Extensions\\WebApplicationExtensions.cs",
               "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Extensions\\WebApplicationExtensions.cs",
               "RelativeToolTip": "TatBlog.WebApp\\Extensions\\WebApplicationExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:32:15.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T01:24:42.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Post.cshtml",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Post.cshtml",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Views\\Blog\\Post.cshtml",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Views\\Blog\\Post.cshtml",
+              "RelativeToolTip": "TatBlog.WebApp\\Views\\Blog\\Post.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwCoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:16:18.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\appsettings.json",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\appsettings.json",
+              "RelativeToolTip": "TatBlog.WebApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-10T01:01:50.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CommentViewModel.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Models\\CommentViewModel.cs",
+              "RelativeDocumentMoniker": "TatBlog.WebApp\\Models\\CommentViewModel.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Models\\CommentViewModel.cs",
+              "RelativeToolTip": "TatBlog.WebApp\\Models\\CommentViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:13:20.699Z"
             }
           ]
         }

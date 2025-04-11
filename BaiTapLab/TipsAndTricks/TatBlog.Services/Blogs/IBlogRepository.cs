@@ -10,7 +10,7 @@ namespace TatBlog.Services.Blogs
         Task<Post> GetPostAsync(int year, int month, string slug, CancellationToken cancellationToken = default);
 
         // Tìm Top N bài viết phổ biến được nhiều người xem nhất
-        Task<List<Post>> GetPopularArticlesAsunc(int numPosts, CancellationToken cancellationToken = default);
+        Task<List<Post>> GetPopularArticlesAsync(int numPosts, CancellationToken cancellationToken = default);
 
         // Kiểm tra xem tên định danh của bài viết đã có hay chưa
         Task<bool> IsPostSlugExistedAsync(int postId, string slug, CancellationToken cancellationToken = default);

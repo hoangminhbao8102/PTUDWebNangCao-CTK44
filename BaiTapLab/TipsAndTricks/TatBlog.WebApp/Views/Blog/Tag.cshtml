@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Post>
+
+<h2>Bài viết với thẻ: @ViewBag.Tag?.Name</h2>
+
+@foreach (var post in Model)
+{
+    <div class="post-preview">
+        <h3>@post.Title</h3>
+
+        <p>@post.ShortDescription</p>
+
+        <p>
+            <small>Ngày đăng: @post.PostedDate.ToString("dd/MM/yyyy")</small>
+        </p>
+
+        <a asp-action="Post"
+           asp-route-year="@post.PostedDate.Year"
+           asp-route-month="@post.PostedDate.Month"
+           asp-route-day="@post.PostedDate.Day"
+           asp-route-slug="@post.UrlSlug">
+            Xem chi tiết
+        </a>
+    </div>
+}
