@@ -26,5 +26,7 @@
 
         // Số lượng thẻ (nếu cần)
         public int TagCount { get; set; }
+
+        public IEnumerable<string> Tags { get; set; }
     }
 }

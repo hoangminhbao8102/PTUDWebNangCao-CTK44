@@ -84,5 +84,11 @@ namespace TatBlog.Services.Blogs
 
         // Nâng cấp bài tập 1s
         Task<IPagedList<Post>> GetPagedPostsAsync(PostQuery condition, int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default);
+
+        Task<IList<Author>> GetAuthorsAsync(CancellationToken cancellationToken = default);
+
+        Task<Post> GetPostByIdAsync(int postId, bool includeDetails, CancellationToken cancellationToken = default);
+
+        Task<Post> CreateOrUpdatePostAsync(Post post, IEnumerable<string> tags, CancellationToken cancellationToken = default);
     }
 }

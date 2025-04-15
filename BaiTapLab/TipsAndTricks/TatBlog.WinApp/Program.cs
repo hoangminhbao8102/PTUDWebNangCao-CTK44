@@ -64,7 +64,7 @@ foreach (var post in posts)
 IBlogRepository blogRepo = new BlogRepository(context);
 
 // Tìm 3 bài viết được xem/đọc nhiều nhất
-var postBlogs = await blogRepo.GetPopularArticlesAsunc(3);
+var postBlogs = await blogRepo.GetPopularArticlesAsync(3);
 
 // Xuất danh sách bài viết ra màn hình
 foreach (var postBlog in postBlogs)
