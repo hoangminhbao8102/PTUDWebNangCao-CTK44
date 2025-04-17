@@ -1,7 +1,104 @@
-﻿@{
-    ViewData["PageTitle"] = "Bảng điều khiển";
+﻿@using TatBlog.Core.Contracts
+@using TatBlog.Core.DTO
+@model TatBlog.Core.Collections.PagedList<AuthorItem>
+
+@{
+    ViewData["PageTitle"] = "Danh sách tác giả";
+    string sortColumn = Context.Request.Query["sortColumn"];
+    string sortOrder = Context.Request.Query["sortOrder"];
+    string toggledOrder = sortOrder == "ASC" ? "DESC" : "ASC";
 }
 
-<h1>
-    Danh sách tác giả
-</h1>
+<h1>Danh sách tác giả</h1>
+
+<a asp-action="Create" class="btn btn-success mb-3">Thêm tác giả</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortColumn="FullName"
+                   asp-route-sortOrder="@toggledOrder">
+                    Họ tên
+                </a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortColumn="Email"
+                   asp-route-sortOrder="@toggledOrder">
+                    Email
+                </a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortColumn="JoinedDate"
+                   asp-route-sortOrder="@toggledOrder">
+                    Ngày tham gia
+                </a>
+            </th>
+            <th>Số bài viết</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.FullName</td>
+                <td>@author.Email</td>
+                <td>@author.JoinedDate.ToShortDateString()</td>
+                <td>@author.PostCount</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@author.Id">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@author.Id">Xoá</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Phân trang -->
+<div class="d-flex justify-content-center mt-4">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+
+            @if (Model.HasPreviousPage)
+            {
+                <li class="page-item">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-pageNumber="@(Model.PageNumber - 1)"
+                       asp-route-pageSize="@Model.PageSize"
+                       asp-route-sortColumn="@Context.Request.Query["sortColumn"]"
+                       asp-route-sortOrder="@Context.Request.Query["sortOrder"]">Trước</a>
+                </li>
+            }
+
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-pageNumber="@i"
+                       asp-route-pageSize="@Model.PageSize"
+                       asp-route-sortColumn="@Context.Request.Query["sortColumn"]"
+                       asp-route-sortOrder="@Context.Request.Query["sortOrder"]">@i</a>
+                </li>
+            }
+
+            @if (Model.HasNextPage)
+            {
+                <li class="page-item">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-pageNumber="@(Model.PageNumber + 1)"
+                       asp-route-pageSize="@Model.PageSize"
+                       asp-route-sortColumn="@Context.Request.Query["sortColumn"]"
+                       asp-route-sortOrder="@Context.Request.Query["sortOrder"]">Sau</a>
+                </li>
+            }
+
+        </ul>
+    </nav>
+</div>

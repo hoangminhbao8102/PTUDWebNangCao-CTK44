@@ -1,7 +1,69 @@
-﻿@{
+﻿@model TatBlog.WebApp.Areas.Admin.Models.DashboardViewModel
+
+@{
     ViewData["PageTitle"] = "Bảng điều khiển";
 }
 
 <h1>
     Đây là khu vực dành cho người quản trị
 </h1>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Tổng bài viết</h5>
+                <p class="card-text h2">@Model.TotalPosts</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Chưa xuất bản</h5>
+                <p class="card-text h2">@Model.UnpublishedPosts</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Chuyên mục</h5>
+                <p class="card-text h2">@Model.TotalCategories</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Tác giả</h5>
+                <p class="card-text h2">@Model.TotalAuthors</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Bình luận chờ</h5>
+                <p class="card-text h2">@Model.PendingComments</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-secondary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Tổng người theo dõi</h5>
+                <p class="card-text h2">@Model.TotalSubscribers</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-dark mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Theo dõi hôm nay</h5>
+                <p class="card-text h2">@Model.NewSubscribersToday</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -15,6 +15,16 @@ namespace TatBlog.Services.Blogs
             _context = context;
         }
 
+        public async Task<bool> AddSubscriberAsync(string email, CancellationToken cancellationToken = default)
+        {
+            if (await _context.Subscribers.AnyAsync(s => s.Email == email, cancellationToken))
+                return false;
+
+            _context.Subscribers.Add(new Subscriber { Email = email });
+            await _context.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+
         // Chặn một người theo dõi
         public async Task BlockSubscriberAsync(int id, string reason, string notes, CancellationToken cancellationToken = default)
         {
@@ -29,6 +39,23 @@ namespace TatBlog.Services.Blogs
                 subscriber.AdminNotes = notes;
                 await _context.SaveChangesAsync(cancellationToken);
             }
+        }
+
+        // Đếm số người theo dõi mới đăng ký trong ngày hôm nay (UTC)
+        public async Task<int> CountNewSubscribersTodayAsync(CancellationToken cancellationToken = default)
+        {
+            var today = DateTime.UtcNow.AddHours(7).Date;
+            return await _context.Subscribers
+                .Where(s => s.SubscribedDate >= today && s.UnsubscribedDate == null)
+                .CountAsync(cancellationToken);
+        }
+
+        // Đếm tổng số người theo dõi (chưa hủy)
+        public async Task<int> CountSubscribersAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Subscribers
+                .Where(s => s.UnsubscribedDate == null)
+                .CountAsync(cancellationToken);
         }
 
         // Xóa một người theo dõi
@@ -53,6 +80,21 @@ namespace TatBlog.Services.Blogs
         public async Task<Subscriber> GetSubscriberByIdAsync(int id, CancellationToken cancellationToken = default)
         {
             return await _context.Subscribers.FirstOrDefaultAsync(s => s.Id == id, cancellationToken);
+        }
+
+        public async Task<IList<Subscriber>> GetSubscribersAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Subscribers.ToListAsync(cancellationToken);
+        }
+
+        public async Task<bool> RemoveSubscriberAsync(int id, CancellationToken cancellationToken = default)
+        {
+            var subscriber = await _context.Subscribers.FindAsync(new object[] { id }, cancellationToken);
+            if (subscriber == null) return false;
+
+            _context.Subscribers.Remove(subscriber);
+            await _context.SaveChangesAsync(cancellationToken);
+            return true;
         }
 
         // Tìm danh sách người theo dõi theo nhiều tiêu chí khác nhau
@@ -95,6 +137,29 @@ namespace TatBlog.Services.Blogs
                 existing.SubscribedDate = DateTime.UtcNow;
                 await _context.SaveChangesAsync(cancellationToken);
             }
+        }
+
+        public async Task<bool> ToggleSubscriberStatusAsync(int id, CancellationToken cancellationToken = default)
+        {
+            var subscriber = await _context.Subscribers.FindAsync(new object[] { id }, cancellationToken);
+            if (subscriber == null) return false;
+
+            // Nếu đã hủy thì đặt lại thành null (kích hoạt lại)
+            if (subscriber.UnsubscribedDate != null)
+            {
+                subscriber.UnsubscribedDate = null;
+                subscriber.UnsubscribeReason = null;
+                subscriber.Involuntary = null;
+            }
+            else
+            {
+                subscriber.UnsubscribedDate = DateTime.UtcNow;
+                subscriber.UnsubscribeReason = "Tự động hủy từ Toggle";
+                subscriber.Involuntary = false;
+            }
+
+            await _context.SaveChangesAsync(cancellationToken);
+            return true;
         }
 
         // Hủy đăng ký

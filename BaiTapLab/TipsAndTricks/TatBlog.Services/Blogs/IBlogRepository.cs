@@ -90,5 +90,26 @@ namespace TatBlog.Services.Blogs
         Task<Post> GetPostByIdAsync(int postId, bool includeDetails, CancellationToken cancellationToken = default);
 
         Task<Post> CreateOrUpdatePostAsync(Post post, IEnumerable<string> tags, CancellationToken cancellationToken = default);
+
+        // u. Xóa bài viết theo mã số
+        Task<bool> DeletePostByIdAsync(int postId, CancellationToken cancellationToken = default);
+
+        Task<IList<TagItem>> GetTagsAsync(CancellationToken cancellationToken = default);
+
+        Task<Tag> GetTagByIdAsync(int id, CancellationToken cancellationToken = default);
+
+        Task<bool> AddOrUpdateTagAsync(Tag tag, CancellationToken cancellationToken = default);
+
+        Task<bool> DeleteTagAsync(int id, CancellationToken cancellationToken = default);
+
+        Task<int> CountPostsAsync(CancellationToken cancellationToken = default);
+
+        Task<int> CountUnpublishedPostsAsync(CancellationToken cancellationToken = default);
+
+        Task<int> CountCategoriesAsync(CancellationToken cancellationToken = default);
+
+        Task<int> CountAuthorsAsync(CancellationToken cancellationToken = default);
+
+        Task<int> CountUnapprovedCommentsAsync(CancellationToken cancellationToken = default);
     }
 }

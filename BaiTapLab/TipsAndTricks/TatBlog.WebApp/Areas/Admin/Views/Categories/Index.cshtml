@@ -1,7 +1,37 @@
-﻿@{
-    ViewData["PageTitle"] = "Bảng điều khiển";
+﻿@using TatBlog.Core.Entities
+@model IEnumerable<Category>
+
+@{
+    ViewData["PageTitle"] = "Danh sách chủ đề";
 }
 
 <h1>
     Danh sách chủ đề
 </h1>
+
+<a asp-action="Create" class="btn btn-success mb-2">Thêm chủ đề</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Slug</th>
+        <th>Hiện trên menu</th>
+        <th>Thao tác</th>
+    </tr>
+    @foreach (var cat in Model)
+    {
+        <tr>
+            <td>@cat.Id</td>
+            <td>@cat.Name</td>
+            <td>@cat.UrlSlug</td>
+            <td>@cat.ShowOnMenu</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@cat.Id" class="btn btn-sm btn-warning">Sửa</a>
+                <form asp-action="Delete" asp-route-id="@cat.Id" method="post" style="display:inline">
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Xóa?')">Xóa</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

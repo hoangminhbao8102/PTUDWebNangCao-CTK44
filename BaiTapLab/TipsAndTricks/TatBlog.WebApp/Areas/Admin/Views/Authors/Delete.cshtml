@@ -1,0 +1,28 @@
+﻿@model TatBlog.Core.Entities.Author
+
+@{
+    ViewData["Title"] = "Xoá tác giả";
+}
+
+<h2>Xác nhận xoá</h2>
+
+<div class="alert alert-danger">
+    <p>Bạn có chắc chắn muốn xoá tác giả sau không?</p>
+</div>
+
+<dl class="row">
+    <dt class="col-sm-2">Họ tên</dt>
+    <dd class="col-sm-10">@Model.FullName</dd>
+
+    <dt class="col-sm-2">Email</dt>
+    <dd class="col-sm-10">@Model.Email</dd>
+
+    <dt class="col-sm-2">Ngày tham gia</dt>
+    <dd class="col-sm-10">@Model.JoinedDate.ToShortDateString()</dd>
+</dl>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xoá</button>
+    <a asp-action="Index" class="btn btn-secondary">Huỷ</a>
+</form>

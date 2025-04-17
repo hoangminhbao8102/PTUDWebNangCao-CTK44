@@ -25,6 +25,14 @@
                 justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
+                        <a class="nav-link text-dark" 
+                           asp-area="Admin" 
+                           asp-controller="Dashboard" 
+                           asp-action="Index">
+                            Bảng điều khiển
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark"
                            asp-area="Admin"
                            asp-controller="Categories"
@@ -61,12 +69,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark"
-                           asp-area="Admin"
-                           asp-controller="Subscribers"
-                           asp-action="Index"
-                           title="Xem danh sách những người đã đăng ký">
-                            Đăng ký
+                        <a class="nav-link text-dark" 
+                           asp-area="Admin" 
+                           asp-controller="Posts" 
+                           asp-action="AjaxIndex">
+                            Bài viết (AJAX)
                         </a>
                     </li>
                     <li class="nav-item">
@@ -74,9 +81,15 @@
                            asp-area="Admin"
                            asp-controller="Comments"
                            asp-action="Index"
-                           title="Xem danh sách bình luận">
+                           title="Xem quản lý bình luận">
                             Bình luận
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <form asp-controller="Subscriber" asp-action="Add" method="post" class="form-inline">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required />
+                            <button class="btn btn-sm btn-outline-light ml-1" type="submit">Đăng ký</button>
+                        </form>
                     </li>
                 </ul>
             </div>

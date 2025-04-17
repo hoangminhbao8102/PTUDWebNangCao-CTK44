@@ -1,7 +1,36 @@
-﻿@{
-    ViewData["PageTitle"] = "Bảng điều khiển";
+﻿@model IList<TagItem>
+@{
+    ViewData["PageTitle"] = "Danh sách thẻ";
 }
 
 <h1>
     Danh sách thẻ/từ khóa
 </h1>
+
+<a asp-action="Edit" class="btn btn-primary mb-3">Thêm thẻ</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>Slug</th>
+            <th>Số bài viết</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tag in Model)
+        {
+            <tr>
+                <td>@tag.Name</td>
+                <td>@tag.UrlSlug</td>
+                <td>@tag.PostCount</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@tag.Id" class="btn btn-sm btn-warning">Sửa</a>
+                    <form asp-action="Delete" asp-route-id="@tag.Id" method="post" style="display:inline">
+                        <button class="btn btn-sm btn-danger" onclick="return confirm('Xóa thẻ này?')">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -25,5 +25,17 @@ namespace TatBlog.Services.Blogs
 
         // Tìm danh sách người theo dõi theo nhiều tiêu chí khác nhau
         Task<IPagedList<Subscriber>> SearchSubscribersAsync(IPagingParams pagingParams, string keyword, bool? unsubscribed, bool? involuntary, CancellationToken cancellationToken = default);
+
+        Task<IList<Subscriber>> GetSubscribersAsync(CancellationToken cancellationToken = default);
+
+        Task<bool> AddSubscriberAsync(string email, CancellationToken cancellationToken = default);
+
+        Task<bool> RemoveSubscriberAsync(int id, CancellationToken cancellationToken = default);
+
+        Task<bool> ToggleSubscriberStatusAsync(int id, CancellationToken cancellationToken = default);
+
+        Task<int> CountSubscribersAsync(CancellationToken cancellationToken = default);
+
+        Task<int> CountNewSubscribersTodayAsync(CancellationToken cancellationToken = default);
     }
 }

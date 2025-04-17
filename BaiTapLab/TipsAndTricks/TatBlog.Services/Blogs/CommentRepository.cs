@@ -45,6 +45,13 @@ namespace TatBlog.Services.Blogs
             return true;
         }
 
+        public async Task<IList<Comment>> GetAllCommentsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Comments
+                .OrderByDescending(c => c.PostedDate)
+                .ToListAsync(cancellationToken);
+        }
+
         public async Task<Comment> GetCommentByIdAsync(int id, CancellationToken cancellationToken = default)
         {
             return await _context.Comments
@@ -62,6 +69,14 @@ namespace TatBlog.Services.Blogs
         {
             return await _context.Comments
                 .Where(c => !c.IsApproved)
+                .ToListAsync(cancellationToken);
+        }
+
+        public async Task<IList<Comment>> GetUnapprovedCommentsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Comments
+                .Where(c => !c.IsApproved)
+                .OrderByDescending(c => c.PostedDate)
                 .ToListAsync(cancellationToken);
         }
     }

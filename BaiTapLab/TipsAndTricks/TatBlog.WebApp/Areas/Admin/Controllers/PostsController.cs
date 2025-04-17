@@ -11,6 +11,7 @@ using TatBlog.WebApp.Areas.Admin.Models;
 
 namespace TatBlog.WebApp.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class PostsController : Controller
     {
         private readonly ILogger<PostsController> _logger;
@@ -26,31 +27,33 @@ namespace TatBlog.WebApp.Areas.Admin.Controllers
             _mapper = mapper;
         }
 
-        public async Task<IActionResult> Index(PostFilterModel model)
+        public IActionResult AjaxIndex()
         {
-            _logger.LogInformation("Tạo điều kiện truy vấn");
+            return View();
+        }
 
-            // Sử dụng Mapster để tạo đối tượng PostQuery từ đối tượng PostFilterModel model
+        [HttpGet]
+        public async Task<IActionResult> Index(PostFilterModel model, int pageNumber = 1)
+        {
+            _logger.LogInformation("Tạo điều kiện truy vấn bài viết...");
+
+            // Ánh xạ từ model sang PostQuery
             var postQuery = _mapper.Map<PostQuery>(model);
+            postQuery.PublishedOnly = !model.Unpublished;
 
-            //var postQuery = new PostQuery()
-            //{
-            //    Keyword = model.Keyword,
-            //    CategoryId = model.CategoryId,
-            //    AuthorId = model.AuthorId,
-            //    Year = model.Year,
-            //    Month = model.Month,
-            //};
+            // Lấy dữ liệu bài viết đã phân trang
+            var posts = await _blogRepository.GetPagedPostsAsync(postQuery, pageNumber, 10);
 
-            _logger.LogInformation("Lấy danh sách bài viết từ CSDL");
-
-            ViewBag.PostsList = await _blogRepository.GetPagedPostsAsync(postQuery, 1, 10);
-
-            _logger.LogInformation("Chuẩn bị dữ liệu cho ViewModel");
-
+            // Chuẩn bị dữ liệu cho dropdown (tác giả, chủ đề...)
             await PopulatePostFilterModelAsync(model);
 
-            return View(model);
+            var result = new PostFilterResultModel
+            {
+                Filter = model,
+                Posts = posts
+            };
+
+            return View(result);
         }
 
         private async Task PopulatePostFilterModelAsync(PostFilterModel model)
@@ -172,6 +175,70 @@ namespace TatBlog.WebApp.Areas.Admin.Controllers
             return slugExisted 
                 ? Json($"Slug '{urlSlug}' đã được sử dụng") 
                 : Json(true);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> TogglePublish(int id)
+        {
+            var success = await _blogRepository.TogglePublishedStatusAsync(id);
+
+            if (!success)
+            {
+                TempData["ErrorMessage"] = "Không thể thay đổi trạng thái xuất bản cho bài viết.";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var success = await _blogRepository.DeletePostByIdAsync(id);
+
+            if (!success)
+            {
+                TempData["ErrorMessage"] = "Không tìm thấy bài viết để xóa.";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetPostData()
+        {
+            var requestForm = Request.Form;
+
+            int skip = int.Parse(requestForm["start"]);
+            int pageSize = int.Parse(requestForm["length"]);
+            string searchValue = requestForm["search[value]"];
+            string sortColumn = requestForm["columns[" + requestForm["order[0][column]"] + "][data]"];
+            string sortDirection = requestForm["order[0][dir]"];
+
+            var postQuery = new PostQuery
+            {
+                Keyword = searchValue
+            };
+
+            var posts = await _blogRepository.GetPagedPostsAsync(
+                postQuery,
+                pageNumber: skip / pageSize + 1,
+                pageSize: pageSize
+            );
+
+            return Json(new
+            {
+                draw = requestForm["draw"],
+                recordsTotal = posts.TotalItemCount,
+                recordsFiltered = posts.TotalItemCount,
+                data = posts.Select(p => new
+                {
+                    title = p.Title,
+                    categoryName = p.Category.Name,
+                    authorName = p.Author.FullName,
+                    postedDate = p.PostedDate.ToString("dd/MM/yyyy"),
+                    published = p.Published
+                })
+            });
         }
     }
 }

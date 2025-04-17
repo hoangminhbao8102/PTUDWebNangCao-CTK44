@@ -400,6 +400,92 @@ namespace TatBlog.Services.Blogs
             return name.ToLowerInvariant().Replace(" ", "-").Replace(".", "").Replace(",", "");
         }
 
+        public async Task<bool> DeletePostByIdAsync(int postId, CancellationToken cancellationToken = default)
+        {
+            var post = await _context.Posts.FindAsync(new object[] { postId }, cancellationToken);
+
+            if (post == null)
+                return false;
+
+            _context.Posts.Remove(post);
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return true;
+        }
+
+        public async Task<IList<TagItem>> GetTagsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Tags
+                .Select(t => new TagItem
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    UrlSlug = t.UrlSlug,
+                    PostCount = t.Posts.Count
+                })
+                .ToListAsync(cancellationToken);
+        }
+
+        public async Task<Tag> GetTagByIdAsync(int id, CancellationToken cancellationToken = default)
+        {
+            return await _context.Tags.FindAsync(id);
+        }
+
+        public async Task<bool> AddOrUpdateTagAsync(Tag tag, CancellationToken cancellationToken = default)
+        {
+            if (tag.Id > 0)
+                _context.Tags.Update(tag);
+            else
+                await _context.Tags.AddAsync(tag, cancellationToken);
+
+            await _context.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+
+        public async Task<bool> DeleteTagAsync(int id, CancellationToken cancellationToken = default)
+        {
+            var tag = await _context.Tags.FindAsync(id);
+            if (tag == null) return false;
+
+            _context.Tags.Remove(tag);
+            await _context.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+
+        // Đếm tổng số bài viết
+        public async Task<int> CountPostsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Posts.CountAsync(cancellationToken);
+        }
+
+        // Đếm số bài viết chưa xuất bản
+        public async Task<int> CountUnpublishedPostsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Posts
+                .Where(p => !p.Published)
+                .CountAsync(cancellationToken);
+        }
+
+        // Đếm số chuyên mục
+        public async Task<int> CountCategoriesAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Categories.CountAsync(cancellationToken);
+        }
+
+        // Đếm số tác giả
+        public async Task<int> CountAuthorsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Authors.CountAsync(cancellationToken);
+        }
+
+        // Đếm số bình luận chưa được duyệt
+        public async Task<int> CountUnapprovedCommentsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Comments
+                .Where(c => !c.IsApproved)
+                .CountAsync(cancellationToken);
+        }
+
         // b. Tạo lớp DTO TagItem để chứa thông tin về thẻ và số lượng bài viết chứa thẻ đó (Đã tạo lớp TagItem ở TatBlog.Core.DTO)
 
         // p. Tạo lớp PostQuery để lưu trữ điều kiện tìm kiếm (Đã tạo lớp PostQuery ở TatBlog.Core.DTO)

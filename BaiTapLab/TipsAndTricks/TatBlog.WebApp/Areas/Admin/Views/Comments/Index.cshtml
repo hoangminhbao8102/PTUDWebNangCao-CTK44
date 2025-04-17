@@ -1,7 +1,46 @@
-﻿@{
-    ViewData["PageTitle"] = "Bảng điều khiển";
+﻿@model IList<TatBlog.Core.Entities.Comment>
+
+@{
+    ViewData["Title"] = "Quản lý bình luận";
 }
 
 <h1>
-    Danh sách bình luận
+    Quản lý bình luận
 </h1>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Nội dung</th>
+            <th>Ngày gửi</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comment in Model)
+        {
+            <tr>
+                <td>@comment.AuthorName</td>
+                <td>@comment.Email</td>
+                <td>@comment.Content</td>
+                <td>@comment.PostedDate.ToString("dd/MM/yyyy")</td>
+                <td>@(comment.IsApproved ? "Đã duyệt" : "Chờ duyệt")</td>
+                <td>
+                    @if (!comment.IsApproved)
+                    {
+                        <a asp-action="Approve" asp-route-id="@comment.Id" class="btn btn-success btn-sm">Phê duyệt</a>
+                    }
+                    <a asp-action="Delete" asp-route-id="@comment.Id" class="btn btn-danger btn-sm">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -38,8 +38,8 @@
         <label asp-for="ShortDescription"
         class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
-            <textarea class="form-control" 
-            asp-for="ShortDescription"></textarea>
+            <textarea class="form-control rich-text-editor"
+                      asp-for="ShortDescription"></textarea>
             <span asp-validation-for="ShortDescription"
             class="text-danger"></span>
         </div>
@@ -49,8 +49,8 @@
         <label asp-for="Description"
         class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
-            <textarea class="form-control" 
-            asp-for="Description" rows="10"></textarea>
+            <textarea class="form-control rich-text-editor"
+                      asp-for="Description" rows="10"></textarea>
             <span asp-validation-for="ShortDescription"
             class="text-danger"></span>
         </div>

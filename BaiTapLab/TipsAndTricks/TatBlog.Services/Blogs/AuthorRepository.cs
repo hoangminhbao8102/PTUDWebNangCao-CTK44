@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TatBlog.Core.Contracts;
 using TatBlog.Core.DTO;
 using TatBlog.Core.Entities;
@@ -37,6 +32,15 @@ namespace TatBlog.Services.Blogs
             return await _context.SaveChangesAsync(cancellationToken) > 0;
         }
 
+        public async Task<bool> DeleteAuthorAsync(int id, CancellationToken cancellationToken = default)
+        {
+            var author = await _context.Authors.FindAsync(new object[] { id }, cancellationToken);
+            if (author == null) return false;
+
+            _context.Authors.Remove(author);
+            return await _context.SaveChangesAsync(cancellationToken) > 0;
+        }
+
         // b. Tìm một tác giả theo mã số.
         public async Task<Author> GetAuthorByIdAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -51,6 +55,11 @@ namespace TatBlog.Services.Blogs
             return await _context.Authors
                 .Include(a => a.Posts)
                 .FirstOrDefaultAsync(a => a.UrlSlug == slug, cancellationToken);
+        }
+
+        public async Task<IList<Author>> GetAuthorsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Authors.ToListAsync(cancellationToken);
         }
 
         // d. Lấy và phân trang danh sách tác giả kèm theo số lượng bài viết của tác giả đó. Kết quả trả về kiểu IPagedList<AuthorItem>.

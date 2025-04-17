@@ -1,0 +1,21 @@
+﻿@using TatBlog.Core.Entities
+@model Tag
+@{
+    ViewData["Title"] = "Thêm / Sửa thẻ";
+}
+<h1>@(Model.Id > 0 ? "Sửa" : "Thêm") thẻ</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Tên thẻ</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UrlSlug" class="form-label">Slug</label>
+        <input asp-for="UrlSlug" class="form-control" />
+        <span asp-validation-for="UrlSlug" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

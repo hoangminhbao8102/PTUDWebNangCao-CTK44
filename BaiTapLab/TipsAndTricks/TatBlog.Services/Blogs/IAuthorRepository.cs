@@ -21,5 +21,10 @@ namespace TatBlog.Services.Blogs
 
         // f. Tìm danh sách N tác giả có nhiều bài viết nhất.N là tham số đầu vào.
         Task<IList<AuthorItem>> GetTopAuthorsAsync(int count, CancellationToken cancellationToken = default);
+
+        // Bổ sung thêm
+        Task<bool> DeleteAuthorAsync(int id, CancellationToken cancellationToken = default);
+
+        Task<IList<Author>> GetAuthorsAsync(CancellationToken cancellationToken = default); // cho view đơn giản
     }
 }

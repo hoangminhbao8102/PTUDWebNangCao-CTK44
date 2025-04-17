@@ -1,64 +1,132 @@
 ﻿@using TatBlog.Core.Contracts
 @using TatBlog.Core.Entities
-@model TatBlog.WebApp.Areas.Admin.Models.PostFilterModel
+@model TatBlog.WebApp.Areas.Admin.Models.PostFilterResultModel
+
 @{
     ViewData["PageTitle"] = "Danh sách bài viết";
-
-    var postsList = ViewBag.PostsList as IPagedList<Post>;
 }
 
-<h1>
-    Danh sách bài viết
-</h1>
+<h1>Danh sách bài viết</h1>
 
 <!-- Hiển thị Form để tìm bài viết -->
-<partial name="_PostFilterPane" model="Model" />
+<partial name="_PostFilterPane" model="Model.Filter" />
 
-@if (postsList != null && postsList.Count > 0)
+<!-- Tìm kiếm đơn giản -->
+<form asp-action="Index" method="get" class="d-inline-block me-2">
+    <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" placeholder="Tìm theo tiêu đề..." class="form-control d-inline-block w-auto" />
+
+    <label class="form-check-label mx-2">
+        <input type="checkbox" name="unpublishedOnly"
+               class="form-check-input"
+        @(ViewData["UnpublishedOnly"] as bool? == true ? "checked" : "") />
+        Chưa xuất bản
+    </label>
+
+    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+</form>
+
+<!-- Nút Bỏ lọc -->
+<form asp-action="Index" method="get" class="d-inline-block">
+    <button type="submit" class="btn btn-secondary">Bỏ lọc</button>
+</form>
+
+<!-- Danh sách bài viết -->
+@if (Model.Posts != null && Model.Posts.Any())
 {
-    <table class="table table-responsive table-striped">
+    <table class="table table-responsive table-striped mt-3">
         <thead>
             <tr>
                 <th>Tiêu đề</th>
                 <th>Tác giả</th>
                 <th>Chủ đề</th>
                 <th>Xuất bản</th>
+                <th>Hành động</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var post in postsList)
+            @foreach (var post in Model.Posts)
             {
                 <tr>
                     <td>
                         <a asp-area="Admin"
-                        asp-controller="Posts"
-                        asp-action="Edit"
-                        asp-route-id="@post.Id"
-                        class="text-bold">
+                           asp-controller="Posts"
+                           asp-action="Edit"
+                           asp-route-id="@post.Id"
+                           class="text-bold">
                             @post.Title
                         </a>
-
                         <p class="text-muted">
                             @post.Description
                         </p>
                     </td>
+                    <td>@post.Author.FullName</td>
+                    <td>@post.Category.Name</td>
                     <td>
-                        @post.Author.FullName
+                        <form asp-action="TogglePublish" method="post" asp-route-id="@post.Id">
+                            <button class="btn @(post.Published ? "btn-success" : "btn-secondary") btn-sm">
+                                @(post.Published ? "Có" : "Không")
+                            </button>
+                        </form>
                     </td>
                     <td>
-                        @post.Category.Name
-                    </td>
-                    <td>
-                        @(post.Published ? "Có" : "Không")
+                        <form asp-action="Delete" method="post" asp-route-id="@post.Id"
+                              onsubmit="return confirm('Bạn có chắc chắn muốn xóa?')">
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                        </form>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+
+    <!-- Phân trang -->
+    <div class="text-center my-4">
+        @if (Model.Posts.HasPreviousPage)
+        {
+            <a asp-action="Index"
+               asp-route-pageNumber="@(Model.Posts.PageNumber - 1)"
+               asp-route-searchString="@ViewData["CurrentFilter"]"
+               asp-route-unpublishedOnly="@(ViewData["UnpublishedOnly"])"
+               class="btn btn-info me-2">
+                <i class="fa fa-arrow-left"></i> Trang trước
+            </a>
+        }
+        else
+        {
+            <button class="btn btn-outline-secondary me-2" disabled>
+                <i class="fa fa-arrow-left"></i> Trang trước
+            </button>
+        }
+
+        @if (Model.Posts.HasNextPage)
+        {
+            <a asp-action="Index"
+               asp-route-pageNumber="@(Model.Posts.PageNumber + 1)"
+               asp-route-searchString="@ViewData["CurrentFilter"]"
+               asp-route-unpublishedOnly="@(ViewData["UnpublishedOnly"])"
+               class="btn btn-info">
+                Trang sau <i class="fa fa-arrow-right"></i>
+            </a>
+        }
+        else
+        {
+            <button class="btn btn-outline-secondary" disabled>
+                Trang sau <i class="fa fa-arrow-right"></i>
+            </button>
+        }
+    </div>
 }
 else
 {
-    <h1 class="text-danger">
-        Không tìm thấy bài viết nào
-    </h1>
+    <div class="alert alert-warning mt-3">
+        Không tìm thấy bài viết nào.
+    </div>
+}
+
+<!-- Thông báo lỗi nếu có -->
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3">
+        @TempData["ErrorMessage"]
+    </div>
 }

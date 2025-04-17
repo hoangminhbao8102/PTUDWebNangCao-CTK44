@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Danh sách bài viết (AJAX)";
+    Layout = "_AdminLayout";
+}
+
+<h2>Danh sách bài viết</h2>
+
+<table id="postsTable" class="display">
+    <thead>
+        <tr>
+            <th>Tiêu đề</th>
+            <th>Chủ đề</th>
+            <th>Tác giả</th>
+            <th>Ngày đăng</th>
+            <th>Trạng thái</th>
+        </tr>
+    </thead>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#postsTable').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    "url": "@Url.Action("GetPostData", "Post")",
+                    "type": "POST"
+                },
+                "columns": [
+                    { "data": "title" },
+                    { "data": "categoryName" },
+                    { "data": "authorName" },
+                    { "data": "postedDate" },
+                    { "data": "published", "render": function (data) {
+                        return data ? 'Đã đăng' : 'Nháp';
+                    }}
+                ]
+            });
+        });
+    </script>
+}

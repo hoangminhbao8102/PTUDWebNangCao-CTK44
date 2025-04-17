@@ -15,5 +15,9 @@ namespace TatBlog.Services.Blogs
         Task<bool> ApproveCommentAsync(int id, CancellationToken cancellationToken = default);
         
         Task<bool> DeleteCommentAsync(int id, CancellationToken cancellationToken = default);
+
+        Task<IList<Comment>> GetUnapprovedCommentsAsync(CancellationToken cancellationToken = default);
+
+        Task<IList<Comment>> GetAllCommentsAsync(CancellationToken cancellationToken = default);
     }
 }

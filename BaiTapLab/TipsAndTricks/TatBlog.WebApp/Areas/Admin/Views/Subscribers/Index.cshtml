@@ -1,7 +1,44 @@
-﻿@{
-    ViewData["PageTitle"] = "Bảng điều khiển";
+﻿@using TatBlog.Core.Entities
+@model IList<Subscriber>
+
+@{
+    ViewData["PageTitle"] = "Danh sách người đăng ký";
 }
 
-<h1>
-    Danh sách những người đã đăng ký
-</h1>
+<h1>Danh sách người đăng ký</h1>
+
+<form asp-action="Add" method="post">
+    <input type="email" name="email" placeholder="Nhập email" required />
+    <button type="submit">Thêm</button>
+</form>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Ngày đăng ký</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subscriber in Model)
+        {
+            <tr>
+                <td>@subscriber.Email</td>
+                <td>@subscriber.SubscribedDate.ToString("dd/MM/yyyy")</td>
+                <td>@(subscriber.UnsubscribedDate == null ? "Hoạt động" : "Không hoạt động")</td>
+                <td>
+                    <form asp-action="ToggleStatus" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@subscriber.Id" />
+                        <button type="submit">Chuyển trạng thái</button>
+                    </form>
+                    <form asp-action="Remove" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@subscriber.Id" />
+                        <button type="submit">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
