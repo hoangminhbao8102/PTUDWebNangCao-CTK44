@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Threading;
+using Microsoft.Extensions.Caching.Memory;
 using TatBlog.Core.DTO;
 using TatBlog.Core.Entities;
 using TatBlog.Data.Contexts;
@@ -375,7 +375,8 @@ foreach (var post in pagedPostItems)
 // Bài tập 2:
 Console.WriteLine("\n==== BÀI TẬP 2 ====");
 // a. Tạo interface IAuthorRepository và lớp AuthorRepository. (Đã tạo interface IAuthorRepository và lớp AuthorRepository ở TatBlog.Services.Blogs)
-IAuthorRepository authorRepo = new AuthorRepository(context);
+var memoryCache = new MemoryCache(new MemoryCacheOptions());
+IAuthorRepository authorRepo = new AuthorRepository(context, memoryCache);
 
 // b. Tìm một tác giả theo mã số.
 Console.Write("b. Nhập ID tác giả cần tìm: ");
@@ -403,7 +404,7 @@ var pagedAuthors = await authorRepo.GetPagedAuthorsAsync(new PagingParams
 {
     PageNumber = 1,
     PageSize = 5
-});
+}, name: null); // ← truyền rõ name
 
 Console.WriteLine("\nd. Danh sách tác giả (có phân trang):");
 foreach (var a in pagedAuthors)

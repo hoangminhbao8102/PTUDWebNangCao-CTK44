@@ -3,80 +3,12 @@
   "WorkspaceRootPath": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapi\\endpoints\\authorendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|solutionrelative:tatblog.webapi\\endpoints\\authorendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\views\\posts\\ajaxindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\views\\posts\\ajaxindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\views\\posts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\views\\posts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\models\\posteditmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\models\\posteditmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\subscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\subscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\isubscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\isubscriberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.services\\blogs\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD6E9A3-819E-4EB4-AE9D-9F894815EDC4}|TatBlog.Services\\TatBlog.Services.csproj|solutionrelative:tatblog.services\\blogs\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\views\\tags\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\views\\tags\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\views\\tags\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\views\\tags\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapp\\areas\\admin\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534B95F7-78DF-4DF8-974F-1E5638D2CFA6}|TatBlog.WebApp\\TatBlog.WebApp.csproj|solutionrelative:tatblog.webapp\\areas\\admin\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapi\\filters\\validatorfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|solutionrelative:tatblog.webapi\\filters\\validatorfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,249 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AjaxIndex.cshtml",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\AjaxIndex.cshtml",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\AjaxIndex.cshtml",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\AjaxIndex.cshtml",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\AjaxIndex.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T03:25:34.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\Edit.cshtml",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\Edit.cshtml",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\Edit.cshtml",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Views\\Posts\\Edit.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T03:23:07.762Z",
+              "DocumentIndex": 1,
+              "Title": "ValidatorFilter.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
+              "RelativeDocumentMoniker": "TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
+              "RelativeToolTip": "TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T14:36:29.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PostsController.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\PostsController.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\PostsController.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\PostsController.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\PostsController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Title": "AuthorEndpoints.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
+              "RelativeDocumentMoniker": "TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
+              "RelativeToolTip": "TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwDUAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T03:12:44.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_NavBar.cshtml",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_NavBar.cshtml",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_NavBar.cshtml",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_NavBar.cshtml",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_NavBar.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T03:06:12.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PostEditModel.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Models\\PostEditModel.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Models\\PostEditModel.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Models\\PostEditModel.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Models\\PostEditModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T03:23:57.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADAAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T03:03:46.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:51:01.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T03:02:39.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SubscriberRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\SubscriberRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\SubscriberRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\SubscriberRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\SubscriberRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowC4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:56:37.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ISubscriberRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\ISubscriberRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:52:28.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BlogRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\BlogRepository.cs",
-              "ViewState": "AgIAAMQBAAAAAAAAAAAQwOUBAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:40:50.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IBlogRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\IBlogRepository.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAmwGgAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:38:32.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:51:29.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CommentsController.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\CommentsController.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\CommentsController.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\CommentsController.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\CommentsController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:08:43.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CommentRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\CommentRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\CommentRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\CommentRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\CommentRepository.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwE4AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:07:07.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ICommentRepository.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ICommentRepository.cs",
-              "RelativeDocumentMoniker": "TatBlog.Services\\Blogs\\ICommentRepository.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.Services\\Blogs\\ICommentRepository.cs",
-              "RelativeToolTip": "TatBlog.Services\\Blogs\\ICommentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:04:05.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Edit.cshtml",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Edit.cshtml",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Edit.cshtml",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T01:44:31.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Index.cshtml",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Index.cshtml",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Index.cshtml",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Views\\Tags\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T01:43:33.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TagsController.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\TagsController.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\TagsController.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApp\\Areas\\Admin\\Controllers\\TagsController.cs",
-              "RelativeToolTip": "TatBlog.WebApp\\Areas\\Admin\\Controllers\\TagsController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA9wCwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:38:16.987Z",
+              "WhenOpened": "2025-04-17T09:31:59.807Z",
               "EditorCaption": ""
             }
           ]

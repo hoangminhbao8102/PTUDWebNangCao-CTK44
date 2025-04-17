@@ -30,7 +30,8 @@ namespace TatBlog.WebApp.Areas.Admin.Controllers
                 SortOrder = sortOrder
             };
 
-            var authors = await _authorRepository.GetPagedAuthorsAsync(pagingParams);
+            var authors = await _authorRepository.GetPagedAuthorsAsync(pagingParams, name: null);
+
             return View(authors);
         }
 
