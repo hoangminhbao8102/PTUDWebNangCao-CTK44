@@ -75,6 +75,25 @@ namespace TatBlog.Services.Blogs
             return await _context.Authors.ToListAsync(cancellationToken);
         }
 
+        public async Task<IList<AuthorItem>> GetBestAuthorsAsync(int limit, CancellationToken cancellationToken = default)
+        {
+            return await _context.Authors
+                .Where(a => a.Posts.Any(p => p.Published))
+                .OrderByDescending(a => a.Posts.Count(p => p.Published))
+                .Select(a => new AuthorItem
+                {
+                    Id = a.Id,
+                    FullName = a.FullName,
+                    Email = a.Email,
+                    UrlSlug = a.UrlSlug,
+                    ImageUrl = a.ImageUrl,
+                    JoinedDate = a.JoinedDate,
+                    PostCount = a.Posts.Count(p => p.Published)
+                })
+                .Take(limit)
+                .ToListAsync(cancellationToken);
+        }
+
         public async Task<Author> GetCachedAuthorByIdAsync(int authorId)
         {
             return await _memoryCache.GetOrCreateAsync(

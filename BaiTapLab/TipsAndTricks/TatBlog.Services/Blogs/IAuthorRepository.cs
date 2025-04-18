@@ -42,5 +42,7 @@ namespace TatBlog.Services.Blogs
         Task<bool> IsAuthorSlugExistedAsync(int authorId, string slug, CancellationToken cancellationToken = default);
 
         Task<bool> SetImageUrlAsync(int authorId, string imageUrl, CancellationToken cancellationToken = default);
+
+        Task<IList<AuthorItem>> GetBestAuthorsAsync(int limit, CancellationToken cancellationToken = default);
     }
 }

@@ -7,7 +7,6 @@ using System.Net;
 using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using FluentValidation;
-using TatBlog.WebApi.Extensions;
 using TatBlog.Core.Entities;
 using TatBlog.Services.Media;
 using TatBlog.WebApi.Filters;
@@ -64,6 +63,10 @@ namespace TatBlog.WebApi.Endpoints
                 .Produces<ApiResponse<string>>()
                 .Produces(204)
                 .Produces(404);
+
+            routeGroupBuilder.MapGet("/best/{limit:int}", GetBestAuthors)
+                .WithName("GetBestAuthors")
+                .Produces<ApiResponse<IList<AuthorItem>>>();
 
             return app;
         }
@@ -195,6 +198,18 @@ namespace TatBlog.WebApi.Endpoints
             return await authorRepository.DeleteAuthorAsync(id)
                 ? Results.Ok(ApiResponse.Success("Tác giả đã xóa", HttpStatusCode.NoContent))
                 : Results.Ok(ApiResponse.Fail(HttpStatusCode.NotFound, "Không tìm thấy tác giả"));
+        }
+
+        private static async Task<IResult> GetBestAuthors(
+            int limit,
+            [FromServices] IAuthorRepository authorRepository,
+            [FromServices] ILogger logger)
+        {
+            logger.LogInformation("API đang lấy top {Limit} tác giả nổi bật nhất theo số lượng bài viết.", limit);
+
+            var authors = await authorRepository.GetBestAuthorsAsync(limit);
+
+            return Results.Ok(ApiResponse.Success(authors));
         }
     }
 }

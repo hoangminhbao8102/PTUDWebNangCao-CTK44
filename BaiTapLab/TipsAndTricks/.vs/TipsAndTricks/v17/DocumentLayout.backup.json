@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|solutionrelative:tatblog.webapi\\endpoints\\authorendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapi\\filters\\validatorfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|solutionrelative:tatblog.webapi\\filters\\validatorfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|e:\\ptudwebnangcao-ctk44\\baitaplab\\tipsandtricks\\tatblog.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C55FF2A6-2FA5-417B-B529-273A8B7E1016}|TatBlog.WebApi\\TatBlog.WebApi.csproj|solutionrelative:tatblog.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ValidatorFilter.cs",
-              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
-              "RelativeDocumentMoniker": "TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
-              "RelativeToolTip": "TatBlog.WebApi\\Filters\\ValidatorFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:36:29.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AuthorEndpoints.cs",
               "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
               "RelativeDocumentMoniker": "TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
-              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
-              "RelativeToolTip": "TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAQwDUAAABGAAAAAAAAAA==",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs*",
+              "RelativeToolTip": "TatBlog.WebApi\\Endpoints\\AuthorEndpoints.cs*",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAwM0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T09:31:59.807Z",
+              "WhenOpened": "2025-04-17T15:17:47.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "TatBlog.WebApi\\Program.cs",
+              "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Program.cs",
+              "RelativeToolTip": "TatBlog.WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T15:06:01.918Z",
               "EditorCaption": ""
             }
           ]
