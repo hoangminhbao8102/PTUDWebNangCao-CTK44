@@ -486,6 +486,44 @@ namespace TatBlog.Services.Blogs
                 .CountAsync(cancellationToken);
         }
 
+        public async Task<IPagedList<PostItem>> GetPostsByCategorySlugAsync(string slug, IPagingParams pagingParams, CancellationToken cancellationToken = default)
+        {
+            var query = new PostQuery
+            {
+                CategorySlug = slug,
+                PublishedOnly = true
+            };
+
+            return await GetPagedPostsAsync<PostItem>(
+                query,
+                pagingParams,
+                posts => posts.Select(p => new PostItem
+                {
+                    Id = p.Id,
+                    Title = p.Title,
+                    UrlSlug = p.UrlSlug,
+                    ShortDescription = p.ShortDescription,
+                    ImageUrl = p.ImageUrl,
+                    ViewCount = p.ViewCount,
+                    Published = p.Published,
+                    PostedDate = p.PostedDate,
+                    CategoryName = p.Category.Name,
+                    AuthorName = p.Author.FullName,
+                    TagCount = p.Tags.Count,
+                    Tags = p.Tags.Select(t => t.Name)
+                }),
+                cancellationToken);
+        }
+
+        public async Task<Post> GetPostBySlugAsync(string slug, CancellationToken cancellationToken = default)
+        {
+            return await _context.Set<Post>()
+                .Include(p => p.Author)
+                .Include(p => p.Category)
+                .Include(p => p.Tags)
+                .FirstOrDefaultAsync(p => p.UrlSlug == slug, cancellationToken);
+        }
+
         // b. Tạo lớp DTO TagItem để chứa thông tin về thẻ và số lượng bài viết chứa thẻ đó (Đã tạo lớp TagItem ở TatBlog.Core.DTO)
 
         // p. Tạo lớp PostQuery để lưu trữ điều kiện tìm kiếm (Đã tạo lớp PostQuery ở TatBlog.Core.DTO)

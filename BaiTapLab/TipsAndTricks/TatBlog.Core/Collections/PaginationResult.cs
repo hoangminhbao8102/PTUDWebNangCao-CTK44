@@ -10,7 +10,7 @@ public class PaginationResult<T>
 	
 	public PaginationResult(IPagedList<T> pagedList)
 	{
-		Items = pagedList;
+		Items = pagedList.ToList();
 		Metadata = new PagingMetadata(pagedList);
 	}
 }

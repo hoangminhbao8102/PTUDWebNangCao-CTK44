@@ -30,7 +30,14 @@ try
 
     app.SetupRequestPipeline();
 
-    app.MapAuthorEndpoints();
+    app.MapAuthorEndpoints()
+        .MapCategoryEndpoints()
+        .MapPostEndpoints()
+        .MapTagEndpoints()
+        .MapSubscriberEndpoints()
+        .MapCommentEndpoints()
+        .MapFeedbackEndpoints()
+        .MapDashboardEndpoints();
 
     app.Run();
 }

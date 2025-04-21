@@ -1,10 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 using NLog.Web;
 using TatBlog.Data.Contexts;
 using TatBlog.Data.Seeders;
 using TatBlog.Services.Blogs;
 using TatBlog.Services.Media;
 using TatBlog.Services.Timing;
+using TatBlog.WebApi.Models;
+using TatBlog.WebApi.Validations;
 
 namespace TatBlog.WebApi.Extensions
 {
@@ -27,6 +30,12 @@ namespace TatBlog.WebApi.Extensions
                 .AddScoped<IBlogRepository, BlogRepository>();
             builder.Services
                 .AddScoped<IAuthorRepository, AuthorRepository>();
+            builder.Services
+                .AddScoped<IFeedbackRepository, FeedbackRepository>();
+            builder.Services
+                .AddScoped<IValidator<FeedbackEditModel>, FeedbackValidator>();
+            builder.Services
+                .AddScoped<IDashboardRepository, DashboardRepository>();
 
             return builder;
         }

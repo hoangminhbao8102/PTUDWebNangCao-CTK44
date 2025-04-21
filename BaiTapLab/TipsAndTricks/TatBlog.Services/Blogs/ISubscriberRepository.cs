@@ -37,5 +37,7 @@ namespace TatBlog.Services.Blogs
         Task<int> CountSubscribersAsync(CancellationToken cancellationToken = default);
 
         Task<int> CountNewSubscribersTodayAsync(CancellationToken cancellationToken = default);
+
+        Task<IPagedList<Subscriber>> GetPagedSubscribersAsync(IPagingParams pagingParams, CancellationToken cancellationToken = default);
     }
 }

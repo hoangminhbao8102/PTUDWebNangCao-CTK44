@@ -111,5 +111,9 @@ namespace TatBlog.Services.Blogs
         Task<int> CountAuthorsAsync(CancellationToken cancellationToken = default);
 
         Task<int> CountUnapprovedCommentsAsync(CancellationToken cancellationToken = default);
+
+        Task<IPagedList<PostItem>> GetPostsByCategorySlugAsync(string slug, IPagingParams pagingParams, CancellationToken cancellationToken = default);
+
+        Task<Post> GetPostBySlugAsync(string slug, CancellationToken cancellationToken = default);
     }
 }

@@ -70,6 +70,13 @@ namespace TatBlog.Services.Blogs
             }
         }
 
+        public async Task<IPagedList<Subscriber>> GetPagedSubscribersAsync(IPagingParams pagingParams, CancellationToken cancellationToken = default)
+        {
+            return await _context.Subscribers
+                .AsNoTracking()
+                .ToPagedListAsync(pagingParams, cancellationToken); // ✔ Dùng đúng overload
+        }
+
         // Tìm người theo dõi bằng email
         public async Task<Subscriber> GetSubscriberByEmailAsync(string email, CancellationToken cancellationToken = default)
         {

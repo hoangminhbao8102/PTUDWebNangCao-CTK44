@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TatBlog.Core.Contracts;
+using TatBlog.Core.DTO;
 using TatBlog.Core.Entities;
 using TatBlog.Data.Contexts;
+using TatBlog.Services.Extensions;
 
 namespace TatBlog.Services.Blogs
 {
@@ -17,6 +20,16 @@ namespace TatBlog.Services.Blogs
         {
             await _context.Comments.AddAsync(comment, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task<bool> AddOrUpdateAsync(Comment comment, CancellationToken cancellationToken = default)
+        {
+            if (comment.Id > 0)
+                _context.Update(comment);
+            else
+                _context.Add(comment);
+
+            return await _context.SaveChangesAsync(cancellationToken) > 0;
         }
 
         public async Task<bool> ApproveCommentAsync(int id, CancellationToken cancellationToken = default)
@@ -63,6 +76,30 @@ namespace TatBlog.Services.Blogs
             return await _context.Comments
                 .Where(c => c.PostId == postId && (!approvedOnly || c.IsApproved))
                 .ToListAsync(cancellationToken);
+        }
+
+        public async Task<IPagedList<CommentItem>> GetPagedCommentsAsync(CommentFilterModel model, CancellationToken cancellationToken = default)
+        {
+            return await _context.Set<Comment>()
+                .AsNoTracking()
+                .Include(c => c.Post)
+                .WhereIf(model.PostId > 0, c => c.PostId == model.PostId)
+                .WhereIf(!string.IsNullOrWhiteSpace(model.Keyword),
+                         c => c.Content.Contains(model.Keyword))
+                .WhereIf(model.ShowOnlyApproved, c => c.IsApproved)
+                .OrderByDescending(c => c.PostedDate) // ✅ Sửa lại tên đúng
+                .Select(c => new CommentItem()
+                {
+                    Id = c.Id,
+                    PostId = c.PostId,
+                    PostTitle = c.Post.Title,
+                    Content = c.Content,
+                    AuthorName = c.AuthorName,       // ✅ Sửa lại tên đúng
+                    Email = c.Email,
+                    IsApproved = c.IsApproved,
+                    PostedDate = c.PostedDate        // ✅ Sửa lại tên đúng
+                })
+                .ToPagedListAsync(model, cancellationToken);
         }
 
         public async Task<IList<Comment>> GetPendingCommentsAsync(CancellationToken cancellationToken = default)
