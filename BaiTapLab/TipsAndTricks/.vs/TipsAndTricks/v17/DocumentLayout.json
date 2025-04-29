@@ -91,8 +91,7 @@
               "RelativeToolTip": "TatBlog.Core\\DTO\\DashboardStats.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:18:01.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:18:01.227Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "TatBlog.WebApi\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:06:01.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T15:06:01.918Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "TatBlog.Services\\Blogs\\DashboardRepository.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAADwvx8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:13:26.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:13:26.527Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "TatBlog.WebApi\\Extensions\\WebApplicationExtensions.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAMwCUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:07:23.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:07:23.078Z"
             },
             {
               "$type": "Document",
@@ -143,8 +139,7 @@
               "RelativeToolTip": "TatBlog.Core\\Entities\\Comment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:16:26.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:16:26.634Z"
             },
             {
               "$type": "Document",
@@ -156,8 +151,7 @@
               "RelativeToolTip": "TatBlog.Services\\Blogs\\IDashboardRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:12:19.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:12:19.657Z"
             },
             {
               "$type": "Document",
@@ -169,8 +163,7 @@
               "RelativeToolTip": "TatBlog.WebApi\\Endpoints\\FeedbackEndpoints.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:06:19.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:06:19.035Z"
             },
             {
               "$type": "Document",
@@ -182,8 +175,7 @@
               "RelativeToolTip": "TatBlog.WebApi\\Endpoints\\CommentEndpoints.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAgwEwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:44:45.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T08:44:45.308Z"
             },
             {
               "$type": "Document",
@@ -195,8 +187,7 @@
               "RelativeToolTip": "TatBlog.Services\\Blogs\\FeedbackRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:05:29.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:05:29.107Z"
             },
             {
               "$type": "Document",
@@ -208,8 +199,7 @@
               "RelativeToolTip": "TatBlog.Services\\Blogs\\IFeedbackRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T09:05:01.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:05:01.932Z"
             },
             {
               "$type": "Document",
@@ -221,8 +211,7 @@
               "RelativeToolTip": "TatBlog.WebApi\\Endpoints\\TagEndpoints.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:49:31.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T08:49:31.975Z"
             }
           ]
         }
