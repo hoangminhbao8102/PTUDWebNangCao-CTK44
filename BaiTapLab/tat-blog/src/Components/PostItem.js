@@ -1,15 +1,24 @@
-import TagList from "./TagList";
-import Card from "react-bootstrap/Card";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import TagList from "./TagList";
 import { isEmptyOrSpaces } from "../Utils/Utils";
 
-const PostItem = ({ postItem }) => {
 
+const PostItem = ({ postItem }) => {
     let imageUrl = isEmptyOrSpaces(postItem.imageUrl)
-        ? process.env.PUBLIC_URL + "/images/image_1.png"
-        : `${postItem.imageUrl}`;
+        ? process.env.PUBLIC_URL + "/images/image_1.jpg"
+        : postItem.imageUrl;
 
     let postedDate = new Date(postItem.postedDate);
+
+    // Tạo URL cho bài viết
+    const postUrl = `/blog/post/${postedDate.getFullYear()}/${postedDate.getMonth() + 1}/${postedDate.getDate()}/${postItem.urlSlug}`;
+    
+    // Tạo URL cho tác giả
+    const authorUrl = `/blog/author/${postItem.author.urlSlug}`;
+
+    // Tạo URL cho chuyên mục
+    const categoryUrl = `/blog/category/${postItem.category.urlSlug}`;
 
     return (
         <article className="blog-entry mb-4">
@@ -20,23 +29,38 @@ const PostItem = ({ postItem }) => {
                     </div>
                     <div className="col-md-8">
                         <Card.Body>
-                            <Card.Title>{postItem.title}</Card.Title>
+                            {/* Tiêu đề bài viết */}
+                            <Card.Title>
+                                <Link to={postUrl} className="text-decoration-none">
+                                    {postItem.title}
+                                </Link>
+                            </Card.Title>
+
+                            {/* Tên tác giả và chuyên mục */}
                             <Card.Text>
-                                <small className="text-muted">Tác giả:</small>
-                                <span className="text-primary m-1">
+                                <small className="text-muted">Tác giả: </small>
+                                <Link to={authorUrl} className="text-primary m-1 text-decoration-none">
                                     {postItem.author.fullName}
-                                </span>
-                                <small className="text-muted">Chủ đề:</small>
-                                <span className="text-primary m-1">
+                                </Link>
+                                <small className="text-muted">Chủ đề: </small>
+                                <Link to={categoryUrl} className="text-primary m-1 text-decoration-none">
                                     {postItem.category.name}
-                                </span>
+                                </Link>
                             </Card.Text>
-                            <Card.Text>{postItem.shortDescription}</Card.Text>
+
+                            <Card.Text>
+                                {postItem.shortDescription}
+                            </Card.Text>
+
+                            {/* Các tag */}
                             <div className="tag-list">
                                 <TagList tags={postItem.tags} />
                             </div>
-                            <div className="text-end">
-                                <Link to={`/blog/post?year=${postedDate.getFullYear()}&month=${postedDate.getMonth() + 1}&day=${postedDate.getDate()}&slug=${postItem.urlSlug}`} className="btn btn-primary" title={postItem.title}>Xem chi tiết</Link>
+
+                            <div className="text-end mt-2 mb-4">
+                                <Link to={postUrl} className="btn btn-primary" title={postItem.title}>
+                                    Xem chi tiết
+                                </Link>
                             </div>
                         </Card.Body>
                     </div>

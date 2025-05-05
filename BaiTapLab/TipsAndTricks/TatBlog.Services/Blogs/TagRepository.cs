@@ -53,6 +53,11 @@ namespace TatBlog.Services.Blogs
 
         public async Task<IPagedList<TagItem>> GetPagedTagsAsync(TagFilterModel filter, string name, CancellationToken cancellationToken = default)
         {
+            if (filter == null)
+            {
+                filter = new TagFilterModel();
+            }
+
             return await _context.Tags
                 .AsNoTracking()
                 .WhereIf(!string.IsNullOrWhiteSpace(name),
@@ -66,7 +71,7 @@ namespace TatBlog.Services.Blogs
                     PostCount = t.Posts.Count(p => p.Published)
                 })
                 .ToPagedListAsync((IPagingParams)filter, cancellationToken);
-                }
+        }
 
         public async Task<Tag> GetTagByIdAsync(int tagId, CancellationToken cancellationToken = default)
         {

@@ -62,7 +62,7 @@ namespace TatBlog.WebApi.Endpoints
                 PageSize = pageSize
             };
 
-            var tagsList = await tagRepository.GetPagedTagsAsync(filter, name);
+            var tagsList = await tagRepository.GetPagedTagsAsync(filter, name) ?? new PagedList<TagItem>(new List<TagItem>(), 0, filter.PageNumber, filter.PageSize);
 
             var result = new PaginationResult<TagItem>(tagsList);
             return Results.Ok(ApiResponse.Success(result));

@@ -203,8 +203,9 @@ namespace TatBlog.WebApi.Endpoints
         private static async Task<IResult> GetBestAuthors(
             int limit,
             [FromServices] IAuthorRepository authorRepository,
-            [FromServices] ILogger logger)
+            [FromServices] ILoggerFactory loggerFactory)
         {
+            var logger = loggerFactory.CreateLogger("AuthorEndpoints");
             logger.LogInformation("API đang lấy top {Limit} tác giả nổi bật nhất theo số lượng bài viết.", limit);
 
             var authors = await authorRepository.GetBestAuthorsAsync(limit);

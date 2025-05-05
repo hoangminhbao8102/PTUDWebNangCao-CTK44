@@ -8,6 +8,7 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import RSS from './Pages/RSS';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PostDetail from './Components/PostDetail';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                   <Route path="blog/About" element={<About />} />
                   <Route path="blog/Contact" element={<Contact />} />
                   <Route path="blog/RSS" element={<RSS />} />
+                  <Route path="/blog/post/:year/:month/:day/:slug" element={<PostDetail />} />
                 </Route>
               </Routes>
             </div>

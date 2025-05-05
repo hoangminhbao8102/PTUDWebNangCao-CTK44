@@ -31,7 +31,7 @@ const CategoriesWidget = () => {
                                     <span>&nbsp;{item.postCount}</span>
                             </Link>
                         </ListGroup.Item>
-                    )
+                    );
                 })}
             </ListGroup>
             }

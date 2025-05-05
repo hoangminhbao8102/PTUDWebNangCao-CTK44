@@ -1,6 +1,12 @@
 import React from "react";
 import SearchForm from "./SearchForm";
 import CategoriesWidget from "./CategoriesWidget";
+import FeaturedPosts from "./Sidebar/FeaturedPosts";
+import RandomPosts from "./Sidebar/RandomPosts";
+import TagCloud from "./Sidebar/TagCloud";
+import BestAuthors from "./Sidebar/BestAuthors";
+import Archives from "./Sidebar/Archives";
+import SubscribeForm from "./SubscribeForm";
 
 const Sidebar = () => {
     return (
@@ -8,10 +14,18 @@ const Sidebar = () => {
             <SearchForm />
 
             <CategoriesWidget />
+
+            <FeaturedPosts />
             
-            <h1>Bài viết nổi bật</h1>
-            <h1>Đăng ký nhận tin mới</h1>
-            <h1>Tag cloud</h1>
+            <RandomPosts />
+            
+            <TagCloud />
+            
+            <BestAuthors />
+            
+            <Archives />
+            
+            <SubscribeForm />
         </div>
     )
 }

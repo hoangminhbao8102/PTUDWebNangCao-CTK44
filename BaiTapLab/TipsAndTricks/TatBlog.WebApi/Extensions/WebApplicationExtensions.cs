@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;
 using TatBlog.Data.Contexts;
-using TatBlog.Data.Seeders;
 using TatBlog.Services.Blogs;
 using TatBlog.Services.Media;
 using TatBlog.Services.Timing;
@@ -28,6 +27,10 @@ namespace TatBlog.WebApi.Extensions
                 .AddScoped<IMediaManager, LocalFileSystemMediaManager>();
             builder.Services
                 .AddScoped<IBlogRepository, BlogRepository>();
+            builder.Services
+                .AddScoped<ITagRepository, TagRepository>();
+            builder.Services
+                .AddScoped<ISubscriberRepository, SubscriberRepository>();
             builder.Services
                 .AddScoped<IAuthorRepository, AuthorRepository>();
             builder.Services
@@ -58,6 +61,7 @@ namespace TatBlog.WebApi.Extensions
         public static WebApplicationBuilder ConfigureNLog(this WebApplicationBuilder builder)
         {
             builder.Logging.ClearProviders();
+            builder.Logging.AddConsole();
             builder.Host.UseNLog();
 
             return builder;

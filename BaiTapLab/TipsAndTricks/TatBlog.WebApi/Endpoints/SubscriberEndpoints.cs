@@ -48,6 +48,11 @@ namespace TatBlog.WebApi.Endpoints
             [FromBody] SubscriberEditModel model,
             [FromServices] ISubscriberRepository subscriberRepo)
         {
+            if (model == null || string.IsNullOrWhiteSpace(model.Email))
+            {
+                return Results.BadRequest(ApiResponse.Fail(HttpStatusCode.BadRequest, "Thông tin đăng ký không hợp lệ"));
+            }
+
             var existing = await subscriberRepo.GetSubscriberByEmailAsync(model.Email);
             if (existing != null)
             {
@@ -55,6 +60,7 @@ namespace TatBlog.WebApi.Endpoints
             }
 
             await subscriberRepo.SubscribeAsync(model.Email);
+
             return Results.Ok(ApiResponse.Success("Đăng ký theo dõi thành công"));
         }
 

@@ -13,3 +13,16 @@ export async function getPosts(keyword = "", pageSize = 10, pageNumber = 1, sort
         return null;
     }
 }
+
+export async function getPostBySlug(year, month, day, slug) {
+    try {
+        const response = await axios.get(`https://localhost:7239/api/posts/${year}/${month}/${day}/${slug}`);
+        if (response.data.isSuccess)
+            return response.data.result;
+        else
+            return null;
+    } catch (error) {
+        console.error("Error fetching post:", error);
+        return null;
+    }
+}
