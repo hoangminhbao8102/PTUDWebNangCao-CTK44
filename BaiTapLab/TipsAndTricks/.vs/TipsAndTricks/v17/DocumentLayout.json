@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "TatBlog.WebApi\\Extensions\\WebApplicationExtensions.cs",
               "ToolTip": "E:\\PTUDWebNangCao-CTK44\\BaiTapLab\\TipsAndTricks\\TatBlog.WebApi\\Extensions\\WebApplicationExtensions.cs",
               "RelativeToolTip": "TatBlog.WebApi\\Extensions\\WebApplicationExtensions.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAACAAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T08:13:51.212Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "TatBlog.WebApi\\Endpoints\\SubscriberEndpoints.cs",
               "ViewState": "AgIAACIAAAAAAAAAAIAwwEAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T07:58:32.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T07:58:32.383Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "TatBlog.WebApi\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:06:01.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T15:06:01.918Z"
             }
           ]
         }
