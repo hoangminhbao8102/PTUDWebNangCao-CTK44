@@ -27,9 +27,11 @@ export function getPostsFilter(keyword = "", authorId = "", categoryId = "", yea
 }
 
 export function getPostById(id = 0) {
-    if (id > 0) 
+    if (id > 0) {
         return get_api(`https://localhost:7239/api/posts/${id}`);
-    return null;
+    }
+    // Trả về Promise resolve null để tránh lỗi .then
+    return Promise.resolve(null);
 }
 
 export function getPostBySlug(year, month, day, slug) {

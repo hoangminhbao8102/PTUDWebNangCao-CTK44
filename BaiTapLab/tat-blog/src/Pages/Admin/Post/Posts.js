@@ -48,7 +48,7 @@ const Posts = () => {
                     <tbody>
                         {postsList.length > 0 ? postsList.map((item, index) => 
                             <tr key={index}>
-                                <td><Link to={`/admin/post/edit/${item.id}`} className='text-bold'>{item.title}</Link>
+                                <td><Link to={`/admin/posts/edit/${item.id}`} className='text-bold'>{item.title}</Link>
                                 <p className='text-muted'>{item.shortDescription}</p>
                                 </td>
                                 <td>{item.author.fullName}</td>

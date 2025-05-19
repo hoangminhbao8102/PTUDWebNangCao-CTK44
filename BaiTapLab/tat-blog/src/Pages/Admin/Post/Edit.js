@@ -134,7 +134,7 @@ const Edit = () => {
                                 <option key={index} value={item.value}>{item.text}</option>
                             )}
                         </Form.Select>
-                        <Form.Select.Feedback type="invalid">Không được bỏ trống</Form.Select.Feedback>
+                        <Form.Control.Feedback type="invalid">Không được bỏ trống</Form.Control.Feedback>
                     </div>
                 </div>
 
@@ -147,7 +147,7 @@ const Edit = () => {
                                 <option key={index} value={item.value}>{item.text}</option>
                             )}
                         </Form.Select>
-                        <Form.Select.Feedback type="invalid">Không được bỏ trống</Form.Select.Feedback>
+                        <Form.Control.Feedback type="invalid">Không được bỏ trống</Form.Control.Feedback>
                     </div>
                 </div>
 
