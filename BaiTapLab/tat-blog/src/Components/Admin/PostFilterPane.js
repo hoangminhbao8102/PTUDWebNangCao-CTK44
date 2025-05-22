@@ -10,7 +10,8 @@ import {
     updateCategoryId,
     updateKeyword,
     updateMonth,
-    updateYear
+    updateYear,
+    updateUnpublishedOnly
 } from "../../Redux/Reducer";
 
 const initialState = {
@@ -20,7 +21,7 @@ const initialState = {
 };
 
 const PostFilterPane = () => {
-    const postFilter = useSelector(state => state.postFilter), 
+    const postFilter = useSelector(state => state.postFilter),
         dispatch = useDispatch(),
         [filter, setFilter] = useState(initialState);
 
@@ -111,6 +112,17 @@ const PostFilterPane = () => {
                             <option key={index} value={item.value}>{item.text}</option>
                         ))}
                 </Form.Select>
+            </Form.Group>
+
+            {/* ✅ Checkbox Chưa xuất bản */}
+            <Form.Group className="col-auto d-flex align-items-center">
+                <Form.Check
+                    type="checkbox"
+                    id="unpublishedOnly"
+                    label="Chưa xuất bản"
+                    checked={postFilter.unpublishedOnly}
+                    onChange={(e) => dispatch(updateUnpublishedOnly(e.target.checked))}
+                />
             </Form.Group>
 
             <Form.Group className="col-auto">

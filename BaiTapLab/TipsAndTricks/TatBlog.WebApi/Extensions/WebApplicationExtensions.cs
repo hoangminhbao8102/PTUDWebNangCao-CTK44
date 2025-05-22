@@ -1,4 +1,7 @@
-﻿using FluentValidation;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;
 using TatBlog.Data.Contexts;
@@ -18,27 +21,38 @@ namespace TatBlog.WebApi.Extensions
 
             builder.Services.AddDbContext<BlogDbContext>(options =>
                 options.UseSqlServer(
-                    builder.Configuration
-                        .GetConnectionString("DefaultConnection")));
+                    builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            builder.Services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.RequireHttpsMetadata = false;
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes("tatblog-secret-key")) // 🔐 Replace this with real key
+                    };
+                });
+
+            builder.Services.AddAuthorization();
+
+            // Đăng ký các DI khác
             builder.Services
-                .AddScoped<ITimeProvider, LocalTimeProvider>();
-            builder.Services
-                .AddScoped<IMediaManager, LocalFileSystemMediaManager>();
-            builder.Services
-                .AddScoped<IBlogRepository, BlogRepository>();
-            builder.Services
-                .AddScoped<ITagRepository, TagRepository>();
-            builder.Services
-                .AddScoped<ISubscriberRepository, SubscriberRepository>();
-            builder.Services
-                .AddScoped<IAuthorRepository, AuthorRepository>();
-            builder.Services
-                .AddScoped<IFeedbackRepository, FeedbackRepository>();
-            builder.Services
+                .AddScoped<ITimeProvider, LocalTimeProvider>()
+                .AddScoped<IMediaManager, LocalFileSystemMediaManager>()
+                .AddScoped<IBlogRepository, BlogRepository>()
+                .AddScoped<IAuthorRepository, AuthorRepository>()
+                .AddScoped<ITagRepository, TagRepository>()
+                .AddScoped<ICommentRepository, CommentRepository>()
+                .AddScoped<ISubscriberRepository, SubscriberRepository>()
+                .AddScoped<IFeedbackRepository, FeedbackRepository>()
+                .AddScoped<IDashboardRepository, DashboardRepository>()
                 .AddScoped<IValidator<FeedbackEditModel>, FeedbackValidator>();
-            builder.Services
-                .AddScoped<IDashboardRepository, DashboardRepository>();
 
             return builder;
         }
@@ -79,14 +93,21 @@ namespace TatBlog.WebApi.Extensions
         {
             if (app.Environment.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            app.UseStaticFiles();
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
 
             app.UseCors("TatBlogApp");
+
+            // 👇 THÊM dòng này để xử lý [Authorize]
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             return app;
         }

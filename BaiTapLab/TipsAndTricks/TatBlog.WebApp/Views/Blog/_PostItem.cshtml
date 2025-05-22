@@ -50,7 +50,7 @@
                         @Html.Raw(Model.Description)
                     </p>
                     <div class="tag-list">
-                        <partial name="_TagList" model="@Model.Tags" />
+                        <partial name="_TagList" model="Model.PostTags.Select(pt => pt.Tag)" />
                     </div>
 
                     <div class="text-end">

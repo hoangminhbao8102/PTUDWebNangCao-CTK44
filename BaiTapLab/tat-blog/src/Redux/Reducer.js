@@ -6,6 +6,7 @@ const initialState = {
     categoryId: "",
     year: "",
     month: "",
+    unpublishedOnly: false,
 };
 
 const postFilterReducer = createSlice({
@@ -45,6 +46,12 @@ const postFilterReducer = createSlice({
                 year: action.payload,
             };
         },
+        updateUnpublishedOnly: (state, action) => {
+            return {
+                ...state,
+                unpublishedOnly: action.payload,
+            };
+        },
     },
 });
 
@@ -55,6 +62,7 @@ export const {
     updateCategoryId,
     updateMonth,
     updateYear,
+    updateUnpublishedOnly,
 } = postFilterReducer.actions;
 
 export const reducer = postFilterReducer.reducer;

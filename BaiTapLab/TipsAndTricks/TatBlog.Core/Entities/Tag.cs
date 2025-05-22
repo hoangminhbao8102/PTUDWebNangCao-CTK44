@@ -18,6 +18,8 @@ namespace TatBlog.Core.Entities
         public string Description { get; set; }
 
         // Danh sách các bài viết có chứa từ khóa
-        public IList<Post> Posts { get; set; }
+        // public IList<Post> Posts { get; set; }
+
+        public ICollection<PostTag> PostTags { get; set; }
     }
 }

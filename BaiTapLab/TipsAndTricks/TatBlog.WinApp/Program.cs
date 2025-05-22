@@ -363,7 +363,7 @@ var pagedPostItems = await blogRepo.GetPagedPostsAsync<PostItem>(
         PostedDate = x.PostedDate,
         CategoryName = x.Category.Name,
         AuthorName = x.Author.FullName,
-        TagCount = x.Tags.Count
+        TagCount = x.PostTags.Count
     }));
 
 Console.WriteLine("\nt. Kết quả PostItem:");

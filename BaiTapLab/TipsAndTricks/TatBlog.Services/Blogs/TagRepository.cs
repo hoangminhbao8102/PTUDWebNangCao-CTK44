@@ -68,7 +68,7 @@ namespace TatBlog.Services.Blogs
                     Name = t.Name,
                     UrlSlug = t.UrlSlug,
                     Description = t.Description,
-                    PostCount = t.Posts.Count(p => p.Published)
+                    PostCount = t.PostTags.Count(pt => pt.Post.Published)
                 })
                 .ToPagedListAsync((IPagingParams)filter, cancellationToken);
         }

@@ -115,7 +115,11 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 10,
                     Author = authors[0],
                     Category = categories[0],
-                    Tags = new List<Tag> { tags[0], tags[1] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[0] },
+                        new PostTag { Tag = tags[1] }
+                    }
                 },
                 new()
                 {
@@ -130,7 +134,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 25,
                     Author = authors[1],
                     Category = categories[2],
-                    Tags = new List<Tag> { tags[2], tags[10], tags[11] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[2] },
+                        new PostTag { Tag = tags[10] },
+                        new PostTag { Tag = tags[11] }
+                    }
                 },
                 new()
                 {
@@ -145,7 +154,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 40,
                     Author = authors[2],
                     Category = categories[0],
-                    Tags = new List<Tag> { tags[3], tags[8], tags[9] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[3] },
+                        new PostTag { Tag = tags[8] },
+                        new PostTag { Tag = tags[9] }
+                    }
                 },
                 new()
                 {
@@ -160,7 +174,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 60,
                     Author = authors[3],
                     Category = categories[1],
-                    Tags = new List<Tag> { tags[12], tags[13], tags[11] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[12] },
+                        new PostTag { Tag = tags[13] },
+                        new PostTag { Tag = tags[11] }
+                    }
                 },
                 new()
                 {
@@ -175,7 +194,13 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 80,
                     Author = authors[4],
                     Category = categories[5],
-                    Tags = new List<Tag> { tags[4], tags[5], tags[6], tags[7] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[4] },
+                        new PostTag { Tag = tags[5] },
+                        new PostTag { Tag = tags[6] },
+                        new PostTag { Tag = tags[7] }
+                    }
                 },
                 new()
                 {
@@ -190,7 +215,11 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 55,
                     Author = authors[0],
                     Category = categories[0],
-                    Tags = new List<Tag> { tags[1], tags[10] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[1] },
+                        new PostTag { Tag = tags[10] }
+                    }
                 },
                 new()
                 {
@@ -205,7 +234,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 88,
                     Author = authors[1],
                     Category = categories[8],
-                    Tags = new List<Tag> { tags[18], tags[8], tags[9] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[18] },
+                        new PostTag { Tag = tags[18] },
+                        new PostTag { Tag = tags[9] }
+                    }
                 },
                 new()
                 {
@@ -220,7 +254,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 104,
                     Author = authors[2],
                     Category = categories[2],
-                    Tags = new List<Tag> { tags[10], tags[11], tags[0] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[10] },
+                        new PostTag { Tag = tags[11] },
+                        new PostTag { Tag = tags[0] }
+                    }
                 },
                 new()
                 {
@@ -235,7 +274,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 72,
                     Author = authors[3],
                     Category = categories[8],
-                    Tags = new List<Tag> { tags[9], tags[17], tags[18] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[9] },
+                        new PostTag { Tag = tags[17] },
+                        new PostTag { Tag = tags[18] } 
+                    }
                 },
                 new()
                 {
@@ -250,7 +294,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 93,
                     Author = authors[4],
                     Category = categories[3],
-                    Tags = new List<Tag> { tags[0], tags[9], tags[3] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[0] }, 
+                        new PostTag { Tag = tags[9] }, 
+                        new PostTag { Tag = tags[3] } 
+                    }
                 },
                 new()
                 {
@@ -265,7 +314,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 120,
                     Author = authors[0],
                     Category = categories[1],
-                    Tags = new List<Tag> { tags[13], tags[12], tags[8] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[13] }, 
+                        new PostTag { Tag = tags[12] }, 
+                        new PostTag { Tag = tags[8] } 
+                    }
                 },
                 new()
                 {
@@ -280,7 +334,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 85,
                     Author = authors[1],
                     Category = categories[8],
-                    Tags = new List<Tag> { tags[17], tags[9], tags[2] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[17] }, 
+                        new PostTag { Tag = tags[9] }, 
+                        new PostTag { Tag = tags[2] } 
+                    }
                 },
                 new()
                 {
@@ -295,7 +354,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 140,
                     Author = authors[2],
                     Category = categories[2],
-                    Tags = new List<Tag> { tags[17], tags[14], tags[15] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[17] }, 
+                        new PostTag { Tag = tags[14] }, 
+                        new PostTag { Tag = tags[15] } 
+                    }
                 },
                 new()
                 {
@@ -310,7 +374,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 130,
                     Author = authors[3],
                     Category = categories[6],
-                    Tags = new List<Tag> { tags[0], tags[11], tags[16] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[0] }, 
+                        new PostTag { Tag = tags[11] }, 
+                        new PostTag { Tag = tags[16] } 
+                    }
                 },
                 new()
                 {
@@ -325,7 +394,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 95,
                     Author = authors[4],
                     Category = categories[9],
-                    Tags = new List<Tag> { tags[12], tags[19], tags[8] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[12] }, 
+                        new PostTag { Tag = tags[19] }, 
+                        new PostTag { Tag = tags[8] } 
+                    }
                 },
                 new()
                 {
@@ -340,7 +414,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 110,
                     Author = authors[0],
                     Category = categories[0],
-                    Tags = new List<Tag> { tags[8], tags[9], tags[12] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[8] }, 
+                        new PostTag { Tag = tags[9] }, 
+                        new PostTag { Tag = tags[12] } 
+                    }
                 },
                 new()
                 {
@@ -355,7 +434,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 70,
                     Author = authors[1],
                     Category = categories[2],
-                    Tags = new List<Tag> { tags[15], tags[16], tags[17] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[15] }, 
+                        new PostTag { Tag = tags[16] }, 
+                        new PostTag { Tag = tags[17] } 
+                    }
                 },
                 new()
                 {
@@ -370,7 +454,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 135,
                     Author = authors[2],
                     Category = categories[7],
-                    Tags = new List<Tag> { tags[18], tags[19], tags[3] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[18] }, 
+                        new PostTag { Tag = tags[19] }, 
+                        new PostTag { Tag = tags[3] } 
+                    }
                 },
                 new()
                 {
@@ -385,7 +474,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 122,
                     Author = authors[3],
                     Category = categories[4],
-                    Tags = new List<Tag> { tags[16], tags[9], tags[14] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[16] }, 
+                        new PostTag { Tag = tags[9] }, 
+                        new PostTag { Tag = tags[14] } 
+                    }
                 },
                 new()
                 {
@@ -400,7 +494,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 105,
                     Author = authors[4],
                     Category = categories[9],
-                    Tags = new List<Tag> { tags[19], tags[8], tags[17] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[19] }, 
+                        new PostTag { Tag = tags[8] }, 
+                        new PostTag { Tag = tags[17] } 
+                    }
                 },
                 new()
                 {
@@ -415,7 +514,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 98,
                     Author = authors[0],
                     Category = categories[0],
-                    Tags = new List<Tag> { tags[9], tags[10], tags[11] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[9] }, 
+                        new PostTag { Tag = tags[10] }, 
+                        new PostTag { Tag = tags[11] } 
+                    }
                 },
                 new()
                 {
@@ -430,7 +534,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 110,
                     Author = authors[1],
                     Category = categories[2],
-                    Tags = new List<Tag> { tags[15], tags[17], tags[14] }
+                    PostTags = new List<PostTag> 
+                    {
+                        new PostTag { Tag = tags[15] }, 
+                        new PostTag { Tag = tags[17] }, 
+                        new PostTag { Tag = tags[14] } 
+                    }
                 },
                 new()
                 {
@@ -445,7 +554,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 89,
                     Author = authors[2],
                     Category = categories[3],
-                    Tags = new List<Tag> { tags[0], tags[3], tags[18] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[0] }, 
+                        new PostTag { Tag = tags[3] }, 
+                        new PostTag { Tag = tags[18] } 
+                    }
                 },
                 new()
                 {
@@ -460,7 +574,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 114,
                     Author = authors[3],
                     Category = categories[6],
-                    Tags = new List<Tag> { tags[11], tags[12], tags[19] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[11] }, 
+                        new PostTag { Tag = tags[12] }, 
+                        new PostTag { Tag = tags[19] } 
+                    }
                 },
                 new()
                 {
@@ -475,7 +594,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 130,
                     Author = authors[4],
                     Category = categories[8],
-                    Tags = new List<Tag> { tags[8], tags[17], tags[19] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[8] }, 
+                        new PostTag { Tag = tags[17] }, 
+                        new PostTag { Tag = tags[19] } 
+                    }
                 },
                 new()
                 {
@@ -490,7 +614,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 150,
                     Author = authors[0],
                     Category = categories[1],
-                    Tags = new List<Tag> { tags[11], tags[12], tags[13] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[11] }, 
+                        new PostTag { Tag = tags[12] }, 
+                        new PostTag { Tag = tags[13] } 
+                    }
                 },
                 new()
                 {
@@ -505,7 +634,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 87,
                     Author = authors[1],
                     Category = categories[7],
-                    Tags = new List<Tag> { tags[19], tags[8], tags[18] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[19] }, 
+                        new PostTag { Tag = tags[8] }, 
+                        new PostTag { Tag = tags[18] } 
+                    }
                 },
                 new()
                 {
@@ -520,7 +654,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 95,
                     Author = authors[2],
                     Category = categories[2],
-                    Tags = new List<Tag> { tags[14], tags[15], tags[17] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[14] }, 
+                        new PostTag { Tag = tags[15] }, 
+                        new PostTag { Tag = tags[17] } 
+                    }
                 },
                 new()
                 {
@@ -535,7 +674,12 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 125,
                     Author = authors[3],
                     Category = categories[0],
-                    Tags = new List<Tag> { tags[0], tags[3], tags[10] }
+                    PostTags = new List<PostTag> 
+                    { 
+                        new PostTag { Tag = tags[0] }, 
+                        new PostTag { Tag = tags[3] }, 
+                        new PostTag { Tag = tags[10] } 
+                    }
                 },
                 new()
                 {
@@ -550,7 +694,13 @@ namespace TatBlog.Data.Seeders
                     ViewCount = 135,
                     Author = authors[4],
                     Category = categories[5],
-                    Tags = new List<Tag> { tags[4], tags[5], tags[6], tags[7] }
+                    PostTags = new List<PostTag>
+                    {
+                        new PostTag { Tag = tags[4] },
+                        new PostTag { Tag = tags[5] },
+                        new PostTag { Tag = tags[6] },
+                        new PostTag { Tag = tags[7] }
+                    }
                 }
             };
 

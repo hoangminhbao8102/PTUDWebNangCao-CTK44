@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import axios from "axios";
+import { subscribe } from "../Services/SubscriberRepository";
 
 const SubscribeForm = () => {
     const [email, setEmail] = useState("");
@@ -18,9 +18,7 @@ const SubscribeForm = () => {
         }
 
         try {
-            const response = await axios.post("https://localhost:7239/api/subscribers/subscribe", {
-                email: email,
-            });
+            const response = await subscribe(email);
 
             if (response.data.isSuccess) {
                 setMessage("Đăng ký thành công!");

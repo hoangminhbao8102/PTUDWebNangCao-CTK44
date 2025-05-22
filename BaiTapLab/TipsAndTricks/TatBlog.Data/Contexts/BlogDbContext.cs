@@ -20,6 +20,8 @@ namespace TatBlog.Data.Contexts
 
         public DbSet<Feedback> Feedbacks { get; set; }
 
+        public DbSet<PostTag> PostTags { get; set; }
+
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer(@"Server=LAPTOP-N4TOHTRH\SQLEXPRESS;Database=TatBlog;User ID=sa;Password=minhbao8102;TrustServerCertificate=True;");
@@ -30,6 +32,7 @@ namespace TatBlog.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CategoryMap).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PostMap).Assembly);
         }
     }
 }

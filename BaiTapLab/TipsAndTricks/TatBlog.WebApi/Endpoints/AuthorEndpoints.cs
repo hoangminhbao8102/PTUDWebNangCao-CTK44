@@ -41,12 +41,11 @@ namespace TatBlog.WebApi.Endpoints
                 .Produces(400)
                 .Produces(409);
 
-            routeGroupBuilder.MapPost("/{id:int}", SetAuthorPicture)
+            app.MapPost("/api/authors/{id:int}", SetAuthorPicture)
                 .WithName("SetAuthorPicture")
                 .Accepts<IFormFile>("multipart/form-data")
-                .Produces(401)
                 .Produces<ApiResponse<string>>()
-                .Produces(400);
+                .RequireAuthorization();
 
             routeGroupBuilder.MapPut("/{id:int}", UpdateAuthor)
                 .WithName("UpdateAnAuthor")

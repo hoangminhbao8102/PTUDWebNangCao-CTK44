@@ -58,9 +58,9 @@ namespace TatBlog.WebApi.Endpoints
                 .Produces<ApiResponse<PostItem>>();
 
             routeGroupBuilder.MapPost("/{id:int}/picture", UploadPostImage)
-                .WithName("UploadPostImage")
-                .Accepts<IFormFile>("multipart/form-data")
-                .Produces<ApiResponse<string>>();
+               .Accepts<IFormFile>("multipart/form-data")
+               .WithName("UploadPostImage")
+               .Produces<ApiResponse<string>>();
 
             routeGroupBuilder.MapPut("/{id:int}", UpdatePost)
                 .WithName("UpdatePost")
@@ -241,9 +241,21 @@ namespace TatBlog.WebApi.Endpoints
             return Results.Ok(ApiResponse.Success("Bài viết đã được cập nhật"));
         }
 
-        private static async Task<IResult> UploadPostImage(int id, IFormFile imageFile, IMediaManager mediaManager)
+        private static async Task<IResult> UploadPostImage(
+            HttpRequest request,
+            int id,
+            IMediaManager mediaManager)
         {
-            var imagePath = await mediaManager.SaveFileAsync(imageFile.OpenReadStream(), imageFile.FileName, imageFile.ContentType);
+            var form = await request.ReadFormAsync();
+            var file = form.Files["imageFile"];
+
+            if (file == null || file.Length == 0)
+            {
+                return Results.BadRequest(ApiResponse.Fail(HttpStatusCode.BadRequest, "No file uploaded"));
+            }
+
+            var imagePath = await mediaManager.SaveFileAsync(file.OpenReadStream(), file.FileName, file.ContentType);
+
             return string.IsNullOrWhiteSpace(imagePath)
                 ? Results.BadRequest(ApiResponse.Fail(HttpStatusCode.BadRequest, "Upload failed"))
                 : Results.Ok(ApiResponse.Success(imagePath));

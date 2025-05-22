@@ -17,25 +17,10 @@ namespace TatBlog.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("PostTag", b =>
-                {
-                    b.Property<int>("PostsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TagsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("PostsId", "TagsId");
-
-                    b.HasIndex("TagsId");
-
-                    b.ToTable("PostTags", (string)null);
-                });
 
             modelBuilder.Entity("TatBlog.Core.Entities.Author", b =>
                 {
@@ -250,6 +235,21 @@ namespace TatBlog.Data.Migrations
                     b.ToTable("Posts", (string)null);
                 });
 
+            modelBuilder.Entity("TatBlog.Core.Entities.PostTag", b =>
+                {
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PostId", "TagId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("PostTags", (string)null);
+                });
+
             modelBuilder.Entity("TatBlog.Core.Entities.Subscriber", b =>
                 {
                     b.Property<int>("Id")
@@ -314,21 +314,6 @@ namespace TatBlog.Data.Migrations
                     b.ToTable("Tags", (string)null);
                 });
 
-            modelBuilder.Entity("PostTag", b =>
-                {
-                    b.HasOne("TatBlog.Core.Entities.Post", null)
-                        .WithMany()
-                        .HasForeignKey("PostsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TatBlog.Core.Entities.Tag", null)
-                        .WithMany()
-                        .HasForeignKey("TagsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("TatBlog.Core.Entities.Comment", b =>
                 {
                     b.HasOne("TatBlog.Core.Entities.Post", "Post")
@@ -362,6 +347,25 @@ namespace TatBlog.Data.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("TatBlog.Core.Entities.PostTag", b =>
+                {
+                    b.HasOne("TatBlog.Core.Entities.Post", "Post")
+                        .WithMany("PostTags")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TatBlog.Core.Entities.Tag", "Tag")
+                        .WithMany("PostTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+
+                    b.Navigation("Tag");
+                });
+
             modelBuilder.Entity("TatBlog.Core.Entities.Author", b =>
                 {
                     b.Navigation("Posts");
@@ -375,6 +379,13 @@ namespace TatBlog.Data.Migrations
             modelBuilder.Entity("TatBlog.Core.Entities.Post", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("PostTags");
+                });
+
+            modelBuilder.Entity("TatBlog.Core.Entities.Tag", b =>
+                {
+                    b.Navigation("PostTags");
                 });
 #pragma warning restore 612, 618
         }

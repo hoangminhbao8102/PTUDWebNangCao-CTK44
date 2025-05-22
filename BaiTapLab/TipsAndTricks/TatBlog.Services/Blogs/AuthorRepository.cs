@@ -19,9 +19,20 @@ namespace TatBlog.Services.Blogs
             _memoryCache = memoryCache;
         }
 
-        public Task<bool> AddOrUpdateAsync(Author author, CancellationToken cancellationToken = default)
+        public async Task<bool> AddOrUpdateAsync(Author author, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            if (author.Id > 0)
+            {
+                // Cập nhật
+                _context.Authors.Update(author);
+            }
+            else
+            {
+                // Thêm mới
+                await _context.Authors.AddAsync(author, cancellationToken);
+            }
+
+            return await _context.SaveChangesAsync(cancellationToken) > 0;
         }
 
         // a. Tạo interface IAuthorRepository và lớp AuthorRepository.

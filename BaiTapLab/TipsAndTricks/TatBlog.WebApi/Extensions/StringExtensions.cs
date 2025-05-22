@@ -1,4 +1,7 @@
-﻿namespace TatBlog.WebApi.Extensions
+﻿using System.Text;
+using System.Text.RegularExpressions;
+
+namespace TatBlog.WebApi.Extensions
 {
     public static class StringExtensions
     {
@@ -7,17 +10,16 @@
             if (string.IsNullOrWhiteSpace(input))
                 return string.Empty;
 
-            input = input.ToLowerInvariant();
+            // Không cần mã hóa nếu không làm việc với mã nguồn Cyrillic
+            var normalized = input.Normalize(NormalizationForm.FormD);
+            var bytes = Encoding.ASCII.GetBytes(normalized); // hoặc Encoding.UTF8
+            var ascii = Encoding.ASCII.GetString(bytes);
 
-            // Loại bỏ ký tự không phải chữ và số
-            var bytes = System.Text.Encoding.GetEncoding("Cyrillic").GetBytes(input);
-            input = System.Text.Encoding.ASCII.GetString(bytes);
+            // Loại bỏ ký tự không hợp lệ và thay thế khoảng trắng bằng gạch nối
+            var slug = Regex.Replace(ascii, @"[^a-zA-Z0-9\s-]", string.Empty);
+            slug = Regex.Replace(slug, @"\s+", "-").Trim('-');
 
-            input = System.Text.RegularExpressions.Regex.Replace(input, @"\s", "-");       // khoảng trắng => dấu gạch ngang
-            input = System.Text.RegularExpressions.Regex.Replace(input, @"[^a-z0-9\s-]", ""); // ký tự đặc biệt
-            input = System.Text.RegularExpressions.Regex.Replace(input, @"-+", "-");      // gộp dấu gạch ngang
-
-            return input.Trim('-');
+            return slug.ToLowerInvariant();
         }
     }
 }

@@ -25,6 +25,9 @@ const Navbar = () => {
                         <Nav.Item>
                             <Link to="/admin/comments" className="nav-link text-dark">Bình luận</Link>
                         </Nav.Item>
+                        <Nav.Item>
+                            <Link to="/admin/subscribes" className="nav-link text-dark">Người đăng ký</Link>
+                        </Nav.Item>
                     </Nav>
                 </Nb.Collapse>
             </div>

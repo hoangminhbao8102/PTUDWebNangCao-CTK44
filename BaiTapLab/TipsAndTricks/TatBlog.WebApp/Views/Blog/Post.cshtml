@@ -18,15 +18,19 @@
 
     <p class="text-muted mt-3">Lượt xem: @Model.ViewCount</p>
 
-    @if (Model.Tags?.Any() == true)
+    @{
+        var tags = Model.PostTags?.Select(pt => pt.Tag).ToList();
+    }
+
+    @if (tags?.Any() == true)
     {
         <p>
             Tags:
-            @foreach (var tag in Model.Tags)
+            @for (int i = 0; i < tags.Count; i++)
             {
+                var tag = tags[i];
                 <a asp-action="Tag" asp-route-slug="@tag.UrlSlug">@tag.Name</a>
-
-                @(tag != Model.Tags.Last() ? ", " : "")
+                @(i < tags.Count - 1 ? ", " : "")
             }
         </p>
     }

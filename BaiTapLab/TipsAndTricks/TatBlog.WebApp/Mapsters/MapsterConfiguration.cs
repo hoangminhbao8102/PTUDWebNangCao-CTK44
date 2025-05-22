@@ -10,8 +10,8 @@ namespace TatBlog.WebApp.Mapsters
         public void Register(TypeAdapterConfig config)
         {
             config.NewConfig<Post, PostItem>()
-                .Map(dest => dest.CategoryName, src => src.Category.Name)
-                .Map(dest => dest.Tags, src => src.Tags.Select(x => x.Name));
+        .Map(dest => dest.CategoryName, src => src.Category.Name)
+        .Map(dest => dest.Tags, src => src.PostTags.Select(pt => pt.Tag.Name)); // ✅ sửa ở đây
 
             config.NewConfig<PostFilterModel, PostQuery>()
                 .Map(dest => dest.PublishedOnly, src => false);
@@ -21,7 +21,7 @@ namespace TatBlog.WebApp.Mapsters
                 .Ignore(dest => dest.ImageUrl);
 
             config.NewConfig<Post, PostEditModel>()
-                .Map(dest => dest.SelectedTags, src => string.Join("\r\n", src.Tags.Select(x => x.Name)))
+                .Map(dest => dest.SelectedTags, src => string.Join("\r\n", src.PostTags.Select(pt => pt.Tag.Name))) // ✅ sửa ở đây
                 .Ignore(dest => dest.CategoryList)
                 .Ignore(dest => dest.AuthorList)
                 .Ignore(dest => dest.ImageFile);

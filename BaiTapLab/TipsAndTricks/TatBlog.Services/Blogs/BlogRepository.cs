@@ -70,19 +70,19 @@ namespace TatBlog.Services.Blogs
 
         public async Task<Post> CreateOrUpdatePostAsync(Post post, IEnumerable<string> tags, CancellationToken cancellationToken = default)
         {
-            // Chuẩn hóa danh sách tag (loại bỏ trùng lặp, khoảng trắng)
+            // Chuẩn hóa danh sách tag
             var tagList = tags
                 .Where(t => !string.IsNullOrWhiteSpace(t))
                 .Select(t => t.Trim())
                 .Distinct(StringComparer.OrdinalIgnoreCase)
                 .ToList();
 
-            // Lấy danh sách các tag đã tồn tại trong CSDL
+            // Lấy các tag đã tồn tại
             var existingTags = await _context.Tags
                 .Where(t => tagList.Contains(t.Name))
                 .ToListAsync(cancellationToken);
 
-            // Tìm hoặc tạo mới các tag còn thiếu
+            // Tạo các tag mới nếu chưa có
             var newTags = tagList
                 .Where(name => existingTags.All(t => !t.Name.Equals(name, StringComparison.OrdinalIgnoreCase)))
                 .Select(name => new Tag
@@ -93,21 +93,38 @@ namespace TatBlog.Services.Blogs
                 })
                 .ToList();
 
-            // Gộp danh sách tất cả các tag
-            var allTags = existingTags.Concat(newTags).ToList();
+            // Thêm tag mới vào CSDL
+            if (newTags.Any())
+                await _context.Tags.AddRangeAsync(newTags, cancellationToken);
 
-            // Gán danh sách tag cho bài viết
-            post.Tags = allTags;
+            var allTags = existingTags.Concat(newTags).ToList();
 
             // Thêm mới hoặc cập nhật bài viết
             if (post.Id > 0)
-                _context.Posts.Update(post);
-            else
-                await _context.Posts.AddAsync(post, cancellationToken);
+            {
+                // Xoá tất cả các PostTag cũ
+                var oldPostTags = _context.PostTags.Where(pt => pt.PostId == post.Id);
+                _context.PostTags.RemoveRange(oldPostTags);
 
-            // Thêm các tag mới vào DbContext
-            if (newTags.Any())
-                await _context.Tags.AddRangeAsync(newTags, cancellationToken);
+                _context.Posts.Update(post);
+            }
+            else
+            {
+                await _context.Posts.AddAsync(post, cancellationToken);
+            }
+
+            // Lưu post để có Id nếu là post mới
+            await _context.SaveChangesAsync(cancellationToken);
+
+            // Tạo mới lại các PostTag
+            foreach (var tag in allTags)
+            {
+                _context.PostTags.Add(new PostTag
+                {
+                    PostId = post.Id,
+                    TagId = tag.Id
+                });
+            }
 
             await _context.SaveChangesAsync(cancellationToken);
             return post;
@@ -145,7 +162,7 @@ namespace TatBlog.Services.Blogs
                     Name = t.Name,
                     UrlSlug = t.UrlSlug,
                     Description = t.Description,
-                    PostCount = t.Posts.Count(p => p.Published)
+                    PostCount = t.PostTags.Count(pt => pt.Post.Published)
                 })
                 .ToListAsync(cancellationToken);
         }
@@ -245,7 +262,7 @@ namespace TatBlog.Services.Blogs
                     Name = x.Name,
                     UrlSlug = x.UrlSlug,
                     Description = x.Description,
-                    PostCount = x.Posts.Count(p => p.Published)
+                    PostCount = x.PostTags.Count(pt => pt.Post.Published)
                 });
 
             return await tagQuery.ToPagedListAsync(pagingParams, cancellationToken);
@@ -293,17 +310,24 @@ namespace TatBlog.Services.Blogs
             return await _context.Posts
                 .Include(p => p.Author)
                 .Include(p => p.Category)
-                .Include(p => p.Tags)
+                .Include(p => p.PostTags)
+                    .ThenInclude(pt => pt.Tag)
                 .FirstOrDefaultAsync(p => p.Id == postId, cancellationToken);
         }
 
         public async Task<Post> GetPostByIdAsync(int postId, bool includeDetails, CancellationToken cancellationToken = default)
         {
-            return await _context.Posts
+            IQueryable<Post> query = _context.Posts
                 .Include(p => p.Author)
-                .Include(p => p.Category)
-                .Include(p => p.Tags)
-                .FirstOrDefaultAsync(p => p.Id == postId, cancellationToken);
+                .Include(p => p.Category);
+
+            if (includeDetails)
+            {
+                query = query.Include(p => p.PostTags)
+                             .ThenInclude(pt => pt.Tag);
+            }
+
+            return await query.FirstOrDefaultAsync(p => p.Id == postId, cancellationToken);
         }
 
         // q. Tìm tất cả bài viết thỏa điều kiện trong PostQuery
@@ -369,7 +393,8 @@ namespace TatBlog.Services.Blogs
             IQueryable<Post> posts = _context.Posts
                 .Include(p => p.Category)
                 .Include(p => p.Author)
-                .Include(p => p.Tags);
+                .Include(p => p.PostTags)
+                    .ThenInclude(pt => pt.Tag);
 
             if (query.AuthorId.HasValue)
                 posts = posts.Where(p => p.AuthorId == query.AuthorId);
@@ -421,7 +446,7 @@ namespace TatBlog.Services.Blogs
                     Id = t.Id,
                     Name = t.Name,
                     UrlSlug = t.UrlSlug,
-                    PostCount = t.Posts.Count
+                    PostCount = t.PostTags.Count(pt => pt.Post.Published)
                 })
                 .ToListAsync(cancellationToken);
         }
@@ -486,7 +511,10 @@ namespace TatBlog.Services.Blogs
                 .CountAsync(cancellationToken);
         }
 
-        public async Task<IPagedList<PostItem>> GetPostsByCategorySlugAsync(string slug, IPagingParams pagingParams, CancellationToken cancellationToken = default)
+        public async Task<IPagedList<PostItem>> GetPostsByCategorySlugAsync(
+    string slug,
+    IPagingParams pagingParams,
+    CancellationToken cancellationToken = default)
         {
             var query = new PostQuery
             {
@@ -509,8 +537,8 @@ namespace TatBlog.Services.Blogs
                     PostedDate = p.PostedDate,
                     CategoryName = p.Category.Name,
                     AuthorName = p.Author.FullName,
-                    TagCount = p.Tags.Count,
-                    Tags = p.Tags.Select(t => t.Name)
+                    TagCount = p.PostTags.Count,
+                    Tags = p.PostTags.Select(pt => pt.Tag.Name)
                 }),
                 cancellationToken);
         }
@@ -520,7 +548,8 @@ namespace TatBlog.Services.Blogs
             return await _context.Set<Post>()
                 .Include(p => p.Author)
                 .Include(p => p.Category)
-                .Include(p => p.Tags)
+                .Include(p => p.PostTags)
+                    .ThenInclude(pt => pt.Tag)
                 .FirstOrDefaultAsync(p => p.UrlSlug == slug, cancellationToken);
         }
 

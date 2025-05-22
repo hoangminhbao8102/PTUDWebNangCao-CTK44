@@ -57,9 +57,17 @@ namespace TatBlog.WebApi.Endpoints
             [AsParameters] CommentFilterModel model,
             [FromServices] ICommentRepository commentRepo)
         {
-            var commentList = await commentRepo.GetPagedCommentsAsync(model);
-            var result = new PaginationResult<CommentItem>(commentList);
+            if (commentRepo == null)
+                return Results.Problem("Comment repository is not available.", statusCode: 500);
 
+            if (model == null)
+                return Results.BadRequest("Invalid filter parameters.");
+
+            var commentList = await commentRepo.GetPagedCommentsAsync(model);
+            if (commentList == null)
+                return Results.NotFound("No comments found.");
+
+            var result = new PaginationResult<CommentItem>(commentList);
             return Results.Ok(ApiResponse.Success(result));
         }
 

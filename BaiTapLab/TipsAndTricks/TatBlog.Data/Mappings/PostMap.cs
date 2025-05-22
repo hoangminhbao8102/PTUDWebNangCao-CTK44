@@ -60,10 +60,6 @@ namespace TatBlog.Data.Mappings
                 .HasForeignKey(p => p.AuthorId)
                 .HasConstraintName("FK_Posts_Authors")
                 .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasMany(p => p.Tags)
-                .WithMany(t => t.Posts)
-                .UsingEntity(pt => pt.ToTable("PostTags"));
         }
     }
 }
