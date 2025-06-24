@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "webelectroshop.client", "webelectroshop.client\webelectroshop.client.esproj", "{51C49DAF-F4B2-1C2D-64B5-A4C1938CE41D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebElectroShop.Server", "WebElectroShop.Server\WebElectroShop.Server.csproj", "{07FC2CB1-CF04-4C4B-8100-CD77E2716BF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51C49DAF-F4B2-1C2D-64B5-A4C1938CE41D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C49DAF-F4B2-1C2D-64B5-A4C1938CE41D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C49DAF-F4B2-1C2D-64B5-A4C1938CE41D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{51C49DAF-F4B2-1C2D-64B5-A4C1938CE41D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C49DAF-F4B2-1C2D-64B5-A4C1938CE41D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C49DAF-F4B2-1C2D-64B5-A4C1938CE41D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{07FC2CB1-CF04-4C4B-8100-CD77E2716BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07FC2CB1-CF04-4C4B-8100-CD77E2716BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07FC2CB1-CF04-4C4B-8100-CD77E2716BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07FC2CB1-CF04-4C4B-8100-CD77E2716BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0A0142D-60B1-440A-8712-BE7472857983}
+	EndGlobalSection
+EndGlobal
